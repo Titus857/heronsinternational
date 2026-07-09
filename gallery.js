@@ -1,214 +1,278 @@
+/* ============================================================
+   GALLERY — gallery.js
+   Data comes from gallery-data.js (auto-generated manifest of
+   optimized WebP photos with real dimensions). Thumbs power the
+   masonry grid; full-size versions power the lightbox.
+   ============================================================ */
 (function () {
   'use strict';
 
-  var GALLERY_DATA = {
-    sports: [
-      'IMG_8514.jpg', 'IMG_8639.jpg', 'IMG_8652.jpg', 'IMG_8667.jpg', 'IMG_8680.jpg',
-      'IMG_8694.jpg', 'IMG_8711.jpg', 'IMG_8727.jpg', 'IMG_8741.jpg', 'IMG_8754.jpg',
-      'IMG_8768.jpg', 'IMG_8783.jpg', 'IMG_8797.jpg', 'IMG_8810.jpg', 'IMG_8823.jpg',
-      'IMG_8836.jpg', 'IMG_8849.jpg', 'IMG_8862.jpg', 'IMG_8875.jpg', 'IMG_8888.jpg',
-      'IMG_8901.jpg', 'IMG_8914.jpg', 'IMG_8927.jpg', 'IMG_8940.jpg', 'IMG_8953.jpg',
-      'IMG_8966.jpg', 'IMG_8979.jpg', 'IMG_8992.jpg', 'IMG_9005.jpg', 'IMG_9018.jpg',
-      'IMG_9031.jpg', 'IMG_9044.jpg', 'IMG_9057.jpg', 'IMG_9070.jpg', 'IMG_9085.jpg',
-      'IMG_9098.jpg', 'IMG_9113.jpg', 'IMG_9131.jpg'
-    ],
-    character: [
-      'IMG_0002.JPG', 'IMG_0020.JPG', 'IMG_0036.JPG', 'IMG_0055.JPG', 'IMG_0067.JPG',
-      'IMG_0083.JPG', 'IMG_0098.JPG', 'IMG_0116.JPG', 'IMG_0142.JPG', 'IMG_0157.JPG',
-      'IMG_0168.JPG', 'IMG_0179.JPG', 'IMG_0191.JPG', 'IMG_0205.JPG', 'IMG_0219.JPG',
-      'IMG_0230.JPG', 'IMG_0241.JPG', 'IMG_0256.JPG', 'IMG_0269.JPG', 'IMG_0287.JPG',
-      'IMG_0302.JPG', 'IMG_0315.JPG', 'IMG_0327.JPG', 'IMG_0340.JPG', 'IMG_0351.JPG',
-      'IMG_0366.JPG', 'IMG_0387.JPG', 'IMG_0408.JPG', 'IMG_0423.JPG', 'IMG_0443.JPG',
-      'IMG_0456.JPG', 'IMG_0469.JPG', 'IMG_9720.JPG', 'IMG_9731.JPG', 'IMG_9743.JPG',
-      'IMG_9756.JPG', 'IMG_9767.JPG', 'IMG_9780.JPG', 'IMG_9791.JPG', 'IMG_9802.JPG',
-      'IMG_9814.JPG', 'IMG_9825.JPG', 'IMG_9838.JPG', 'IMG_9853.JPG', 'IMG_9868.JPG',
-      'IMG_9886.JPG', 'IMG_9902.JPG', 'IMG_9921.JPG', 'IMG_9934.JPG', 'IMG_9954.JPG',
-      'IMG_9971.JPG', 'IMG_9991.JPG'
-    ],
-    ghana: [
-      'IMG_7483.jpg', 'IMG_7535.jpg', 'IMG_7549.jpg', 'IMG_7569.jpg', 'IMG_7581.jpg',
-      'IMG_7593.jpg', 'IMG_7655.jpg', 'IMG_7656.jpg', 'IMG_7670.jpg', 'IMG_7676.jpg',
-      'IMG_7697.jpg', 'IMG_7710.jpg', 'IMG_7718.jpg', 'IMG_7734.jpg', 'IMG_7742.jpg',
-      'IMG_7777.jpg', 'IMG_7795.jpg', 'IMG_7839.jpg', 'IMG_7882.jpg', 'IMG_7883.jpg',
-      'IMG_7901.jpg', 'IMG_7923.jpg', 'IMG_7924.jpg', 'IMG_7958.jpg', 'IMG_7974.jpg',
-      'IMG_7981.jpg', 'IMG_7993.jpg', 'IMG_8006.jpg', 'IMG_8007.jpg', 'IMG_8029.jpg',
-      'IMG_8046.jpg', 'IMG_8048.jpg', 'IMG_8056.jpg', 'IMG_8067.jpg', 'IMG_8088.jpg',
-      'IMG_8098.jpg', 'IMG_8146.jpg', 'IMG_8160.jpg', 'IMG_8162.jpg', 'IMG_8167.jpg',
-      'IMG_8175.jpg', 'IMG_8177.jpg', 'IMG_8188.jpg', 'IMG_8196.jpg', 'IMG_8255.jpg',
-      'IMG_8259.jpg', 'IMG_8262.jpg', 'IMG_8335.jpg', 'IMG_8349.jpg', 'IMG_8359.jpg',
-      'IMG_8362.jpg', 'IMG_8388.jpg', 'IMG_8405.jpg', 'IMG_8410.jpg', 'IMG_8428.jpg',
-      'IMG_8429.jpg', 'IMG_8472.jpg'
-    ],
-    others: [
-      'Herons admission 2024--.jpg', 'IMG_0541.jpg', 'IMG_0692.jpg', 'IMG_0711.jpg',
-      'IMG_0720.jpg', 'IMG_0721.jpg', 'IMG_0790.jpg', 'IMG_0791.jpg', 'IMG_0794.jpg',
-      'IMG_0795.jpg', 'IMG_0797.jpg',
-      'WhatsApp Image 2023-01-10 at 08.43.28.jpeg',
-      'WhatsApp Image 2023-01-10 at 08.43.30.jpeg',
-      'WhatsApp Image 2023-01-10 at 08.43.31.jpeg',
-      'WhatsApp Image 2023-01-10 at 09.52.59.jpeg',
-      'WhatsApp Image 2023-01-10 at 09.53.01.jpeg',
-      'WhatsApp Image 2023-01-10 at 09.53.02.jpeg',
-      'WhatsApp Image 2023-01-10 at 09.53.03 (1).jpeg',
-      'WhatsApp Image 2023-01-10 at 09.53.03.jpeg',
-      'WhatsApp Image 2024-06-25 at 17.54.34.jpeg',
-      'WhatsApp Image 2024-06-27 at 14.26.54.jpeg',
-      'WhatsApp Image 2024-06-27 at 14.26.55.jpeg',
-      'WhatsApp Image 2024-06-27 at 14.26.56.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.07.34.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.10.00.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.10.02.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.11.31.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.13.36.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.15.42.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.16.00.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.17.51.jpeg',
-      'WhatsApp Image 2024-07-01 at 16.25.47 (1).jpeg',
-      'WhatsApp Image 2024-07-01 at 16.25.47.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.44.40.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.05 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.05.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.06 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.06.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.07 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.07 (2).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.07.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.08 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.08.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.09.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.10 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.10 (2).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.10.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.11 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.11.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.12 (1).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.12 (2).jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.12.jpeg',
-      'WhatsApp Image 2024-07-02 at 23.46.13.jpeg',
-      'WhatsApp Image 2024-07-03 at 09.59.42.jpeg'
-    ]
-  };
+  if (typeof GALLERY_MANIFEST === 'undefined') return;
 
-  var CAT_LABELS = {
-    sports: 'Sports Day',
-    character: 'Character Day',
-    ghana: 'Ghana Day',
-    others: 'School Life'
-  };
-
-  var CAT_DIRS = {
-    sports: 'sports-day',
-    character: 'character-day',
-    ghana: 'ghana-day',
-    others: 'others'
-  };
-
-  var CAT_ORDER = ['sports', 'ghana', 'character', 'others'];
-  var FEATURED_COUNT = 8;
-  var BATCH_SIZE = 24;
-
-  var HERO_PICKS = [
-    { cat: 'sports', file: 'IMG_8667.jpg' },
-    { cat: 'ghana', file: 'IMG_7718.jpg' },
-    { cat: 'character', file: 'IMG_0116.JPG' },
-    { cat: 'others', file: 'IMG_0541.jpg' }
+  var CATS = [
+    { key: 'sports',    dir: 'sports-day',    label: 'Sports Day',    emoji: '🏅' },
+    { key: 'ghana',     dir: 'ghana-day',     label: 'Ghana Day',     emoji: '🇬🇭' },
+    { key: 'character', dir: 'character-day', label: 'Character Day', emoji: '🎭' },
+    { key: 'others',    dir: 'others',        label: 'School Life',   emoji: '🏫' }
   ];
 
-  var BENTO_LAYOUT = ['hero', '', '', '', 'wide', 'wide', '', ''];
+  var FEATURED_COUNT = 10;
+  var BATCH_SIZE = 24;
+  var THUMB_W = 640;
 
   var allItems = [];
   var itemsByCat = {};
   var visibleItems = [];
   var lightboxItems = [];
   var renderedCount = 0;
-
   var activeFilter = 'all';
   var lbIndex = 0;
 
   var galGrid = document.getElementById('galGrid');
   var galSections = document.getElementById('galSections');
-  var galCount = document.getElementById('galCount');
   var galLoadMore = document.getElementById('galLoadMore');
   var galLoadBtn = document.getElementById('galLoadBtn');
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lbImg');
   var lbCap = document.getElementById('lbCaption');
 
-  function buildItem(cat, file) {
-    return {
-      src: 'assets/gallery/' + CAT_DIRS[cat] + '/' + file,
-      cat: cat,
-      label: CAT_LABELS[cat]
-    };
-  }
+  /* ---------- data ---------- */
 
   function initData() {
-    CAT_ORDER.forEach(function (cat) {
-      itemsByCat[cat] = GALLERY_DATA[cat].map(function (file) {
-        return buildItem(cat, file);
+    CATS.forEach(function (cat) {
+      var photos = GALLERY_MANIFEST[cat.dir] || [];
+      itemsByCat[cat.key] = photos.map(function (p) {
+        return {
+          thumb: 'assets/gallery-opt/' + cat.dir + '/thumb/' + p.n + '.webp',
+          full: 'assets/gallery-opt/' + cat.dir + '/full/' + p.n + '.webp',
+          w: p.w,
+          h: p.h,
+          cat: cat.key,
+          label: cat.label
+        };
       });
-      allItems = allItems.concat(itemsByCat[cat]);
+      allItems = allItems.concat(itemsByCat[cat.key]);
     });
-    galCount.textContent = allItems.length;
-  }
 
-  function buildHero() {
-    var strip = document.getElementById('heroStrip');
-    if (!strip) return;
-
-    HERO_PICKS.forEach(function (pick, i) {
-      var img = document.createElement('img');
-      img.src = 'assets/gallery/' + CAT_DIRS[pick.cat] + '/' + pick.file;
-      img.alt = '';
-      img.loading = i < 2 ? 'eager' : 'lazy';
-      img.decoding = 'async';
-      strip.appendChild(img);
+    // photo counts inside the filter tabs
+    document.querySelectorAll('.gal-tab').forEach(function (btn) {
+      var f = btn.dataset.filter;
+      var n = f === 'all' ? allItems.length : (itemsByCat[f] || []).length;
+      var span = document.createElement('span');
+      span.className = 'gal-tab__n';
+      span.textContent = n;
+      btn.appendChild(span);
     });
   }
 
-  var imgObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      var card = entry.target;
-      var img = card.querySelector('img');
-      if (!img || !img.dataset.src) return;
+  /* ---------- hero story deck ---------- */
 
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-      img.onload = function () {
-        card.classList.add('is-loaded');
-        imgObserver.unobserve(card);
-      };
-      img.onerror = function () {
-        card.style.display = 'none';
-        imgObserver.unobserve(card);
-      };
-    });
-  }, { rootMargin: '300px 0px' });
+  function buildDeck() {
+    var deck = document.getElementById('heroDeck');
+    if (!deck) return;
 
-  var loadMoreObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting || activeFilter === 'all') return;
-      if (renderedCount < visibleItems.length) {
-        renderBatch(renderedCount);
+    // interleave 3 photos from each category
+    var picks = [];
+    for (var i = 0; i < 3; i++) {
+      CATS.forEach(function (cat) {
+        var item = itemsByCat[cat.key][i * 4]; // skip a few so cards vary
+        if (item) picks.push(item);
+      });
+    }
+
+    var tilts = [-7, 4, -3, 6, -5, 3, -6, 5, -4, 7, -3, 5];
+    var dys = [10, -14, 18, -8, 12, -16, 8, -10, 16, -12, 10, -14];
+
+    var track = document.createElement('div');
+    track.className = 'gal-deck__track';
+    var dragDistance = 0; // suppress card clicks after a real drag
+
+    // two identical sets -> seamless wrap at half the track width
+    for (var copy = 0; copy < 2; copy++) {
+      /* eslint-disable no-loop-func */
+      picks.forEach(function (item, idx) {
+        var card = document.createElement('div');
+        card.className = 'gal-deck__card';
+        card.style.setProperty('--tilt', tilts[idx % tilts.length] + 'deg');
+        card.style.setProperty('--dy', dys[idx % dys.length] + 'px');
+
+        var img = document.createElement('img');
+        img.src = item.thumb;
+        img.alt = item.label;
+        img.loading = idx < 6 ? 'eager' : 'lazy';
+        img.decoding = 'async';
+        img.draggable = false;
+        card.appendChild(img);
+
+        card.addEventListener('click', function () {
+          if (dragDistance > 6) return; // that was a drag, not a click
+          lightboxItems = allItems;
+          lbIndex = allItems.indexOf(item);
+          if (lbIndex < 0) lbIndex = 0;
+          showLbItem();
+          lb.removeAttribute('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+
+        track.appendChild(card);
+      });
+    }
+
+    deck.appendChild(track);
+
+    /* Infinite motion: drag with momentum, slow drift when idle.
+       ox is the wall's absolute offset; the track is translated by
+       -mod(ox, half) so it wraps forever in either direction. */
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var DRIFT = 24; // px per second when nobody is touching it
+
+    var half = 0;
+    function measure() { half = track.scrollWidth / 2; }
+    measure();
+    window.addEventListener('load', measure);
+    window.addEventListener('resize', function () { setTimeout(measure, 100); });
+
+    var ox = 0;
+    var vx = 0;
+    var dragging = false;
+    var hovering = false;
+    var lastX = 0;
+    var raf = 0;
+    var last = performance.now();
+    var inView = true;
+
+    function mod(v, m) { return ((v % m) + m) % m; }
+
+    function tick(now) {
+      raf = 0;
+      var dt = Math.min((now - last) / 1000, 0.05);
+      last = now;
+
+      if (!dragging) {
+        vx *= 0.94; // momentum decay
+        if (Math.abs(vx) < 0.05) vx = 0;
+        ox += vx;
+        if (vx === 0 && !hovering && !reducedMotion) {
+          ox += DRIFT * dt;
+        }
+      }
+
+      if (half > 0) {
+        track.style.transform = 'translate3d(' + (-mod(ox, half)) + 'px, 0, 0)';
+      }
+      if (inView) raf = requestAnimationFrame(tick);
+    }
+
+    var io = new IntersectionObserver(function (entries) {
+      inView = entries[0].isIntersecting;
+      if (inView && !raf) {
+        last = performance.now();
+        raf = requestAnimationFrame(tick);
       }
     });
-  }, { rootMargin: '200px 0px' });
+    io.observe(deck);
 
-  function createCard(item, idx, layout) {
+    deck.addEventListener('pointerdown', function (e) {
+      dragging = true;
+      vx = 0;
+      lastX = e.clientX;
+      dragDistance = 0;
+      deck.classList.add('is-dragging');
+      deck.setPointerCapture(e.pointerId);
+    });
+    deck.addEventListener('pointermove', function (e) {
+      if (!dragging) return;
+      var dx = e.clientX - lastX;
+      lastX = e.clientX;
+      dragDistance += Math.abs(dx);
+      ox -= dx; // wall follows the finger
+      vx = -dx; // carried into momentum on release
+    });
+    function endDrag() {
+      dragging = false;
+      deck.classList.remove('is-dragging');
+    }
+    deck.addEventListener('pointerup', endDrag);
+    deck.addEventListener('pointercancel', endDrag);
+
+    // drift pauses while the mouse is over the deck (touch keeps drifting)
+    deck.addEventListener('mouseenter', function () { hovering = true; });
+    deck.addEventListener('mouseleave', function () { hovering = false; });
+
+    raf = requestAnimationFrame(tick);
+  }
+
+  /* ---------- masonry layout ---------- */
+
+  function colsFor(width) {
+    if (width >= 1100) return 4;
+    if (width >= 760) return 3;
+    return 2;
+  }
+
+  function layoutMasonry(grid) {
+    var width = grid.clientWidth;
+    if (!width) return;
+    var cols = colsFor(width);
+    grid.style.setProperty('--cols', cols);
+
+    var gap = parseFloat(getComputedStyle(grid).columnGap) || 14;
+    var colW = (width - (cols - 1) * gap) / cols;
+
+    for (var i = 0; i < grid.children.length; i++) {
+      var card = grid.children[i];
+      var ar = parseFloat(card.dataset.ar);
+      if (!ar) continue;
+      var cardH = colW * ar;
+      card.style.marginBottom = gap + 'px';
+      card.style.gridRowEnd = 'span ' + Math.max(4, Math.round((cardH + gap) / 8));
+    }
+  }
+
+  function layoutAll() {
+    document.querySelectorAll('.gal-masonry').forEach(function (grid) {
+      if (!grid.closest('[hidden]')) layoutMasonry(grid);
+    });
+  }
+
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(layoutAll, 150);
+  });
+
+  /* ---------- cards ---------- */
+
+  var revealObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '60px 0px' });
+
+  function createCard(item, idx, scope) {
     var card = document.createElement('figure');
     card.className = 'gal-card';
-    if (layout) card.classList.add('gal-card--' + layout);
-    card.dataset.idx = idx;
+    card.dataset.ar = (item.h / item.w).toFixed(4);
     card.setAttribute('role', 'button');
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', 'View ' + item.label + ' photo');
 
     var img = document.createElement('img');
-    img.dataset.src = item.src;
+    img.src = item.thumb;
     img.alt = item.label;
+    img.width = THUMB_W;
+    img.height = Math.round(THUMB_W * item.h / item.w);
     img.loading = 'lazy';
     img.decoding = 'async';
+    if (img.complete && img.naturalWidth) {
+      card.classList.add('is-loaded');
+    } else {
+      img.onload = function () { card.classList.add('is-loaded'); };
+      img.onerror = function () { card.style.display = 'none'; };
+    }
 
     var overlay = document.createElement('div');
     overlay.className = 'gal-card__overlay';
@@ -221,17 +285,20 @@
     card.appendChild(overlay);
     card.appendChild(badge);
 
-    card.addEventListener('click', function () { openLightbox(idx, card.dataset.lbScope); });
+    function open() { openLightbox(idx, scope); }
+    card.addEventListener('click', open);
     card.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        openLightbox(idx, card.dataset.lbScope);
+        open();
       }
     });
 
-    imgObserver.observe(card);
+    revealObserver.observe(card);
     return card;
   }
+
+  /* ---------- "All" view: one section per event ---------- */
 
   function renderSections() {
     galGrid.hidden = true;
@@ -239,68 +306,72 @@
     galSections.innerHTML = '';
     galLoadMore.hidden = true;
 
-    CAT_ORDER.forEach(function (cat) {
-      var items = itemsByCat[cat];
+    CATS.forEach(function (cat) {
+      var items = itemsByCat[cat.key];
+      if (!items.length) return;
+
       var section = document.createElement('section');
       section.className = 'gal-section';
-      section.id = 'gal-' + cat;
+      section.id = 'gal-' + cat.key;
 
       var head = document.createElement('div');
       head.className = 'gal-section__head';
       head.innerHTML =
         '<div class="gal-section__copy">' +
-          '<p class="gal-section__eyebrow">' + CAT_LABELS[cat] + '</p>' +
-          '<h2 class="gal-section__title">' + CAT_LABELS[cat] + '</h2>' +
+          '<p class="gal-section__eyebrow">Featured moments</p>' +
+          '<h2 class="gal-section__title">' + cat.label + '</h2>' +
           '<p class="gal-section__count">' + items.length + ' photos</p>' +
         '</div>' +
-        '<button type="button" class="gal-section__cta" data-filter="' + cat + '">View all</button>';
+        '<button type="button" class="gal-section__cta" data-filter="' + cat.key + '">View all ' + items.length + '</button>';
 
       var grid = document.createElement('div');
-      grid.className = 'gal-bento';
+      grid.className = 'gal-masonry';
 
       items.slice(0, FEATURED_COUNT).forEach(function (item, i) {
-        var card = createCard(item, i, BENTO_LAYOUT[i]);
-        card.dataset.lbScope = cat;
-        grid.appendChild(card);
+        grid.appendChild(createCard(item, i, cat.key));
       });
 
       section.appendChild(head);
       section.appendChild(grid);
       galSections.appendChild(section);
+      layoutMasonry(grid);
     });
 
     galSections.querySelectorAll('.gal-section__cta').forEach(function (btn) {
       btn.addEventListener('click', function () {
         setFilter(btn.dataset.filter);
+        window.scrollTo({ top: document.getElementById('gallery').offsetTop - 120, behavior: 'smooth' });
       });
     });
   }
 
+  /* ---------- filtered view: full masonry with batches ---------- */
+
+  var loadMoreObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting || activeFilter === 'all') return;
+      if (renderedCount < visibleItems.length) renderBatch(renderedCount);
+    });
+  }, { rootMargin: '400px 0px' });
+
   function renderBatch(startIdx) {
     var end = Math.min(startIdx + BATCH_SIZE, visibleItems.length);
     var frag = document.createDocumentFragment();
-
     for (var i = startIdx; i < end; i++) {
-      frag.appendChild(createCard(visibleItems[i], i));
+      frag.appendChild(createCard(visibleItems[i], i, null));
     }
-
     galGrid.appendChild(frag);
     renderedCount = end;
+    layoutMasonry(galGrid);
     updateLoadMore();
   }
 
   function updateLoadMore() {
-    if (activeFilter === 'all') {
-      galLoadMore.hidden = true;
-      return;
-    }
-
-    if (renderedCount >= visibleItems.length) {
+    if (activeFilter === 'all' || renderedCount >= visibleItems.length) {
       galLoadMore.hidden = true;
       loadMoreObserver.disconnect();
       return;
     }
-
     galLoadMore.hidden = false;
     galLoadBtn.textContent = 'Load more (' + (visibleItems.length - renderedCount) + ' remaining)';
     loadMoreObserver.observe(galLoadMore);
@@ -310,9 +381,7 @@
     galSections.hidden = true;
     galGrid.hidden = false;
     galGrid.innerHTML = '';
-    galGrid.className = 'gal-grid';
-
-    galCount.textContent = visibleItems.length;
+    galGrid.className = 'gal-masonry';
 
     if (!visibleItems.length) {
       galGrid.innerHTML =
@@ -343,7 +412,6 @@
     });
 
     if (filter === 'all') {
-      galCount.textContent = allItems.length;
       renderSections();
       return;
     }
@@ -351,6 +419,8 @@
     visibleItems = itemsByCat[filter] || [];
     renderCategoryGrid();
   }
+
+  /* ---------- lightbox ---------- */
 
   function openLightbox(idx, scope) {
     if (scope && itemsByCat[scope]) {
@@ -360,7 +430,6 @@
     } else {
       lightboxItems = visibleItems;
     }
-
     lbIndex = idx;
     showLbItem();
     lb.removeAttribute('hidden');
@@ -372,12 +441,38 @@
     document.body.style.overflow = '';
   }
 
+  function preload(idx) {
+    var item = lightboxItems[idx];
+    if (item) new Image().src = item.full;
+  }
+
   function showLbItem() {
     var item = lightboxItems[lbIndex];
-    lbImg.src = item.src;
-    lbImg.alt = item.label;
+    lbImg.classList.add('is-switching');
+    var next = new Image();
+    next.onload = function () {
+      lbImg.src = item.full;
+      lbImg.alt = item.label;
+      lbImg.classList.remove('is-switching');
+    };
+    next.onerror = function () {
+      lbImg.src = item.thumb;
+      lbImg.classList.remove('is-switching');
+    };
+    next.src = item.full;
     lbCap.textContent = item.label + ' · ' + (lbIndex + 1) + ' / ' + lightboxItems.length;
+
+    // warm the neighbours so arrows feel instant
+    preload((lbIndex + 1) % lightboxItems.length);
+    preload((lbIndex - 1 + lightboxItems.length) % lightboxItems.length);
   }
+
+  function lbStep(dir) {
+    lbIndex = (lbIndex + dir + lightboxItems.length) % lightboxItems.length;
+    showLbItem();
+  }
+
+  /* ---------- events ---------- */
 
   function bindEvents() {
     document.querySelectorAll('.gal-tab').forEach(function (btn) {
@@ -391,36 +486,36 @@
     });
 
     document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    document.getElementById('lbPrev').addEventListener('click', function () {
-      lbIndex = (lbIndex - 1 + lightboxItems.length) % lightboxItems.length;
-      showLbItem();
-    });
-    document.getElementById('lbNext').addEventListener('click', function () {
-      lbIndex = (lbIndex + 1) % lightboxItems.length;
-      showLbItem();
-    });
+    document.getElementById('lbPrev').addEventListener('click', function () { lbStep(-1); });
+    document.getElementById('lbNext').addEventListener('click', function () { lbStep(1); });
 
     lb.addEventListener('click', function (e) {
       if (e.target === lb) closeLightbox();
     });
 
+    // swipe to navigate on touch
+    var touchX = null;
+    lb.addEventListener('touchstart', function (e) {
+      touchX = e.touches[0].clientX;
+    }, { passive: true });
+    lb.addEventListener('touchend', function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 45) lbStep(dx > 0 ? -1 : 1);
+    }, { passive: true });
+
     document.addEventListener('keydown', function (e) {
       if (lb.hasAttribute('hidden')) return;
       if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') {
-        lbIndex = (lbIndex - 1 + lightboxItems.length) % lightboxItems.length;
-        showLbItem();
-      }
-      if (e.key === 'ArrowRight') {
-        lbIndex = (lbIndex + 1) % lightboxItems.length;
-        showLbItem();
-      }
+      if (e.key === 'ArrowLeft') lbStep(-1);
+      if (e.key === 'ArrowRight') lbStep(1);
     });
   }
 
   function handleDeepLink() {
     var cat = new URLSearchParams(window.location.search).get('cat');
-    if (cat && GALLERY_DATA[cat]) {
+    if (cat && itemsByCat[cat]) {
       setFilter(cat);
       return;
     }
@@ -428,7 +523,7 @@
   }
 
   initData();
-  buildHero();
+  buildDeck();
   bindEvents();
   handleDeepLink();
 

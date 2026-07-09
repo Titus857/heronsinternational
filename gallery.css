@@ -1,6 +1,6 @@
 /* ============================================================
    GALLERY PAGE — gallery.css
-   MTN Yellow + Grey + White theme
+   Herons gold + charcoal + white · story-deck hero + masonry
    ============================================================ */
 
 .nav__link--active {
@@ -9,11 +9,10 @@
 }
 
 /* ============================================================
-   GALLERY HERO
+   GALLERY HERO — dark stage with drifting story deck
    ============================================================ */
 .gal-hero {
   padding-top: 80px;
-  padding-bottom: 0;
   background: #111111;
   color: #fff;
   overflow: hidden;
@@ -23,33 +22,33 @@
 .gal-hero::before {
   content: "";
   position: absolute;
-  top: -80px;
+  top: -60px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 400px;
-  background: radial-gradient(ellipse at center, rgba(255, 204, 0, .12) 0%, transparent 70%);
+  width: 720px;
+  height: 420px;
+  background: radial-gradient(ellipse at center, rgba(255, 204, 0, .13) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
 
 .gal-hero__inner {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2rem);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 5vw, 4rem) clamp(1rem, 2vw, 1.5rem);
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .gal-hero__eyebrow {
   display: inline-block;
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .78rem;
   font-weight: 700;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--gold, #FFCC00);
+  color: var(--gold);
   margin-bottom: 1.1rem;
   background: rgba(255, 204, 0, .1);
   padding: .35rem 1rem;
@@ -58,7 +57,7 @@
 }
 
 .gal-hero__heading {
-  font-family: 'Fraunces', serif;
+  font-family: var(--serif);
   font-size: clamp(2.4rem, 6vw, 4.2rem);
   font-weight: 500;
   line-height: 1.12;
@@ -69,11 +68,11 @@
 
 .gal-hero__heading em {
   font-style: italic;
-  color: var(--gold, #FFCC00);
+  color: var(--gold);
 }
 
 .gal-hero__sub {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: clamp(.95rem, 2vw, 1.1rem);
   line-height: 1.75;
   color: rgba(255, 255, 255, .65);
@@ -81,34 +80,81 @@
   margin: 0 auto;
 }
 
-.gal-hero__strip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  height: clamp(140px, 22vw, 220px);
-  margin-top: clamp(1.5rem, 3vw, 2rem);
-  padding: 0 clamp(.75rem, 3vw, 2rem);
+/* --- Story deck: an infinite wall of tilted cards.
+       Two copies of the same set; a rAF loop translates the track and
+       wraps it modulo half its width, so it scrolls forever. Drag it
+       (with momentum), or leave it to drift on its own. The browser
+       only composites ONE transformed layer — cheap & smooth. */
+.gal-deck {
+  position: relative;
+  z-index: 1;
+  height: clamp(200px, 30vw, 320px);
+  margin-top: clamp(1rem, 2.5vw, 2rem);
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y; /* vertical swipes still scroll the page */
+  /* soft fade at both edges */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
-.gal-hero__strip img {
+.gal-deck.is-dragging {
+  cursor: grabbing;
+}
+
+.gal-deck.is-dragging .gal-deck__card {
+  pointer-events: none; /* no hover pop mid-drag */
+}
+
+.gal-deck__track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: clamp(.6rem, 1.6vw, 1.25rem);
+  width: max-content;
+  padding: 0 .5rem;
+  will-change: transform;
+}
+
+.gal-deck__card {
+  flex: 0 0 auto;
+  width: clamp(130px, 17vw, 210px);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #1d1d1d;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .45);
+  transform: rotate(var(--tilt, 0deg)) translateY(var(--dy, 0px));
+  transition: transform .4s var(--ease), box-shadow .4s;
+  cursor: pointer;
+  border: 3px solid rgba(255, 255, 255, .92);
+}
+
+.gal-deck__card:hover {
+  transform: rotate(0deg) translateY(calc(var(--dy, 0px) - 8px)) scale(1.05);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, .55), 0 0 0 3px rgba(255, 204, 0, .55);
+  z-index: 3;
+}
+
+.gal-deck__card img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
-  filter: brightness(.8) saturate(1.05);
-  transition: filter .35s, transform .35s;
+  aspect-ratio: 3 / 4;
 }
 
-.gal-hero__strip img:hover {
-  filter: brightness(.95) saturate(1.15);
-  transform: scale(1.02);
+.gal-deck__card:nth-child(even) img {
+  aspect-ratio: 4 / 3.4;
 }
 
 /* ============================================================
    GALLERY MAIN
    ============================================================ */
 .gal-main {
-  background: #F5F5F5;
+  background: var(--light);
   padding-bottom: clamp(4rem, 8vw, 7rem);
 }
 
@@ -123,49 +169,74 @@
    ============================================================ */
 .gal-tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  padding: clamp(1.5rem, 3vw, 2rem) 0 .75rem;
+  gap: clamp(1.25rem, 3.5vw, 2.5rem);
+  padding: clamp(1.25rem, 2.5vw, 1.75rem) 0 0;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
   position: sticky;
   top: 68px;
   z-index: 50;
-  background: linear-gradient(#F5F5F5 85%, rgba(245, 245, 245, 0));
+  background: var(--light);
+  border-bottom: 1px solid #e2dfd8;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.gal-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .gal-tab {
-  font-family: 'Mulish', sans-serif;
-  font-size: .86rem;
+  font-family: var(--sans);
+  font-size: .82rem;
   font-weight: 700;
-  letter-spacing: .02em;
-  padding: .5rem 1.3rem;
-  border-radius: 40px;
-  border: 2px solid transparent;
-  background: #fff;
-  color: #333;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .5rem 0 .95rem;
+  border: none;
+  background: none;
+  color: #8f8b83;
   cursor: pointer;
-  transition: background .2s, border-color .2s, color .2s, transform .15s, box-shadow .2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+  white-space: nowrap;
+  position: relative;
+  transition: color .2s;
+}
+
+.gal-tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .28s var(--ease);
 }
 
 .gal-tab:hover {
-  border-color: #222;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .1);
+  color: #111;
 }
 
 .gal-tab.is-active {
-  background: #FFCC00;
   color: #111;
-  border-color: #FFCC00;
-  box-shadow: 0 4px 16px rgba(255, 204, 0, .35);
 }
 
-.gal-count {
-  font-family: 'Mulish', sans-serif;
-  font-size: .82rem;
-  color: #888;
-  margin-bottom: 1.5rem;
-  padding-top: .25rem;
+.gal-tab.is-active::after {
+  transform: scaleX(1);
+}
+
+.gal-tab__n {
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #b3aea4;
+  vertical-align: super;
+  margin-left: .3rem;
+}
+
+.gal-tab.is-active .gal-tab__n {
+  color: #c49f00;
 }
 
 /* ============================================================
@@ -174,14 +245,7 @@
 .gal-sections {
   display: flex;
   flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 4rem);
-}
-
-.gal-section {
-  background: #fff;
-  border-radius: 20px;
-  padding: clamp(1.25rem, 3vw, 1.75rem);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, .05);
+  gap: clamp(3rem, 6vw, 5rem);
 }
 
 .gal-section__head {
@@ -194,69 +258,67 @@
 }
 
 .gal-section__eyebrow {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .16em;
+  font-weight: 800;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--gold, #FFCC00);
-  margin: 0 0 .35rem;
+  color: #b28f00;
+  margin: 0 0 .3rem;
 }
 
 .gal-section__title {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
   font-weight: 500;
   color: #111;
   margin: 0;
+  letter-spacing: -.01em;
 }
 
 .gal-section__count {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .85rem;
-  color: #888;
-  margin: .35rem 0 0;
+  color: #999;
+  margin: .3rem 0 0;
 }
 
 .gal-section__cta {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .85rem;
   font-weight: 700;
-  padding: .65rem 1.25rem;
+  padding: .6rem 1.35rem;
   border-radius: 999px;
   border: 2px solid #222;
   background: transparent;
   color: #222;
   cursor: pointer;
-  transition: background .2s, color .2s, border-color .2s;
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
   white-space: nowrap;
 }
 
 .gal-section__cta:hover {
-  background: #FFCC00;
-  border-color: #FFCC00;
+  background: var(--gold);
+  border-color: var(--gold);
   color: #111;
-}
-
-/* Bento grid for featured photos */
-.gal-bento {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(160px, 1fr);
-  gap: 12px;
+  transform: translateY(-2px);
 }
 
 /* ============================================================
-   UNIFORM GRID (filtered view)
+   MASONRY GRID
+   True masonry via CSS grid: dense 8px rows, each card spans
+   rows computed in JS from the photo's real aspect ratio
+   (dimensions ship in the manifest, so zero layout shift).
    ============================================================ */
-.gal-grid {
+.gal-masonry {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
+  grid-auto-rows: 8px;
+  gap: 0 14px;
 }
 
 /* ============================================================
-   PHOTO CARDS (shared)
+   PHOTO CARDS
    ============================================================ */
 .gal-card {
   position: relative;
@@ -264,37 +326,39 @@
   border-radius: 14px;
   overflow: hidden;
   cursor: pointer;
-  background: #e4e4e4;
-  aspect-ratio: 4 / 3;
+  background: #e9e7e2;
   box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
-  transition: transform .28s cubic-bezier(.22, 1, .36, 1), box-shadow .28s;
+  transition: transform .3s var(--ease), box-shadow .3s;
+  /* scroll reveal */
+  opacity: 0;
+  transform: translateY(18px);
 }
 
-.gal-bento .gal-card {
-  aspect-ratio: auto;
-  min-height: 160px;
-}
-
-.gal-card--hero {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.gal-card--wide {
-  grid-column: span 2;
+.gal-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .55s ease, transform .55s var(--ease), box-shadow .3s;
 }
 
 .gal-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, .14);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .16);
   z-index: 2;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .gal-card {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* shimmer placeholder until the image decodes */
 .gal-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .45) 50%, transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, .5) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: galShimmer 1.4s infinite;
   z-index: 1;
@@ -316,7 +380,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity .35s ease, transform .4s ease;
+  transition: opacity .4s ease, transform .45s var(--ease);
 }
 
 .gal-card.is-loaded img {
@@ -324,13 +388,13 @@
 }
 
 .gal-card:hover img {
-  transform: scale(1.04);
+  transform: scale(1.045);
 }
 
 .gal-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, .55) 100%);
+  background: linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, .5) 100%);
   opacity: 0;
   transition: opacity .25s;
   pointer-events: none;
@@ -345,9 +409,9 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background: #FFCC00;
+  background: var(--gold);
   color: #111;
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .68rem;
   font-weight: 800;
   letter-spacing: .06em;
@@ -366,6 +430,11 @@
   transform: translateY(0);
 }
 
+.gal-card:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* ============================================================
    LOAD MORE
    ============================================================ */
@@ -377,7 +446,7 @@
 }
 
 .gal-load-btn {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .92rem;
   font-weight: 700;
   padding: .8rem 2.2rem;
@@ -391,8 +460,8 @@
 }
 
 .gal-load-btn:hover {
-  background: #FFCC00;
-  border-color: #FFCC00;
+  background: var(--gold);
+  border-color: var(--gold);
   color: #111;
   transform: translateY(-2px);
 }
@@ -405,7 +474,7 @@
   text-align: center;
   padding: 5rem 1rem;
   color: #888;
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
 }
 
 .gal-empty svg {
@@ -441,7 +510,7 @@
 }
 
 .lb__stage {
-  max-width: min(92vw, 1100px);
+  max-width: min(92vw, 1200px);
   max-height: 92vh;
   display: flex;
   flex-direction: column;
@@ -462,12 +531,17 @@
   border-radius: 10px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, .8);
   object-fit: contain;
+  transition: opacity .18s ease;
+}
+
+.lb__img.is-switching {
+  opacity: 0;
 }
 
 .lb__caption {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--sans);
   font-size: .82rem;
-  color: rgba(255, 255, 255, .45);
+  color: rgba(255, 255, 255, .5);
   text-align: center;
   letter-spacing: .03em;
 }
@@ -494,8 +568,8 @@
 
 .lb__close:hover {
   background: rgba(255, 204, 0, .2);
-  border-color: #FFCC00;
-  color: #FFCC00;
+  border-color: var(--gold);
+  color: var(--gold);
   transform: rotate(90deg);
 }
 
@@ -526,79 +600,40 @@
 .lb__prev:hover,
 .lb__next:hover {
   background: rgba(255, 204, 0, .15);
-  border-color: #FFCC00;
-  color: #FFCC00;
+  border-color: var(--gold);
+  color: var(--gold);
 }
 
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1024px) {
-  .gal-bento {
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(140px, 1fr);
-  }
-
-  .gal-card--hero {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-}
-
 @media (max-width: 760px) {
-  .gal-hero__strip {
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
-    grid-auto-rows: 100px;
+  .gal-masonry {
+    gap: 0 10px;
   }
 
-  .gal-bento {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: minmax(130px, 1fr);
+  .gal-card {
+    border-radius: 11px;
   }
 
-  .gal-card--hero,
-  .gal-card--wide {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-
-  .gal-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .gal-section {
-    border-radius: 16px;
-    padding: 1rem;
+  .gal-deck__card {
+    border-width: 2px;
+    border-radius: 12px;
   }
 }
 
 @media (max-width: 500px) {
-  .gal-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .gal-card {
-    border-radius: 10px;
+  .gal-masonry {
+    gap: 0 8px;
   }
 
   .lb__prev { left: .5rem; }
   .lb__next { right: .5rem; }
-}
 
-@media (max-width: 380px) {
-  .gal-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gal-bento {
-    grid-template-columns: 1fr;
-  }
-
-  .gal-card--hero,
-  .gal-card--wide {
-    grid-column: span 1;
+  .lb__prev,
+  .lb__next {
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, .35);
   }
 }

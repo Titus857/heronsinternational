@@ -144,7 +144,7 @@
       <h1 class="gal-hero__heading">Every day is a story<br /><em>worth telling.</em></h1>
       <p class="gal-hero__sub">Moments from Sports Day, Ghana Day, Character Day and the everyday magic of our classrooms and corridors.</p>
     </div>
-    <div class="gal-hero__strip" aria-hidden="true" id="heroStrip"></div>
+    <div class="gal-deck" aria-hidden="true" id="heroDeck"></div>
   </section>
 
   <!-- ============ GALLERY MAIN ============ -->
@@ -154,14 +154,11 @@
       <!-- Filter tabs -->
       <div class="gal-tabs" role="tablist" aria-label="Filter gallery by event">
         <button class="gal-tab is-active" data-filter="all" role="tab" aria-selected="true">All Photos</button>
-        <button class="gal-tab" data-filter="sports" role="tab" aria-selected="false">🏅 Sports Day</button>
-        <button class="gal-tab" data-filter="character" role="tab" aria-selected="false">🎭 Character Day</button>
-        <button class="gal-tab" data-filter="ghana" role="tab" aria-selected="false">🇬🇭 Ghana Day</button>
-        <button class="gal-tab" data-filter="others" role="tab" aria-selected="false">🏫 School Life</button>
+        <button class="gal-tab" data-filter="sports" role="tab" aria-selected="false">Sports Day</button>
+        <button class="gal-tab" data-filter="character" role="tab" aria-selected="false">Character Day</button>
+        <button class="gal-tab" data-filter="ghana" role="tab" aria-selected="false">Ghana Day</button>
+        <button class="gal-tab" data-filter="others" role="tab" aria-selected="false">School Life</button>
       </div>
-
-      <!-- Count badge -->
-      <p class="gal-count"><span id="galCount">202</span> photos</p>
 
       <!-- Category sections (All view) -->
       <div class="gal-sections" id="galSections" hidden></div>
@@ -253,6 +250,7 @@
   </button>
 
   <script src="script.js"></script>
+  <script src="gallery-data.js"></script>
   <script src="gallery.js"></script>
 </body>
 
