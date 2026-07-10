@@ -526,4 +526,156 @@
       el.classList.add("is-in");
     });
   }
+
+  /* ---------- Stats count-up (numbers roll from 0 on scroll) ---------- */
+  var statsGrid = document.querySelector(".stats__grid");
+  var prefersReduce =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function runCount() {
+    var strongs = document.querySelectorAll(".stats__grid strong");
+    strongs.forEach(function (el) {
+      var m = el.textContent.trim().match(/^(\d+)(%?)$/);
+      if (!m) return; // leave ranges like "3mo–12yrs" untouched
+      var target = parseInt(m[1], 10);
+      var suffix = m[2];
+      var dur = 1100;
+      var start = null;
+      el.textContent = "0" + suffix;
+      function step(ts) {
+        if (start === null) start = ts;
+        var p = Math.min((ts - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(eased * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+
+  if (statsGrid && !prefersReduce && "IntersectionObserver" in window) {
+    var counted = false;
+    var countIO = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !counted) {
+            counted = true;
+            runCount();
+            countIO.disconnect();
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    countIO.observe(statsGrid);
+  }
+
+  /* ---------- Moments ribbon (infinite drift + drag) ---------- */
+  var ribbon = document.getElementById("momentsRibbon");
+  if (ribbon) {
+    var RIBBON_PHOTOS = [
+      "sports-day/thumb/img-8514.webp",
+      "ghana-day/thumb/img-7795.webp",
+      "character-day/thumb/img-0098.webp",
+      "others/thumb/img-0692.webp",
+      "sports-day/thumb/img-8741.webp",
+      "ghana-day/thumb/img-7549.webp",
+      "character-day/thumb/img-0241.webp",
+      "others/thumb/img-0790.webp",
+      "sports-day/thumb/img-8667.webp",
+      "ghana-day/thumb/img-7734.webp",
+      "character-day/thumb/img-0116.webp",
+      "others/thumb/img-0711.webp",
+      "sports-day/thumb/img-8783.webp",
+      "ghana-day/thumb/img-7777.webp",
+      "character-day/thumb/img-0456.webp",
+      "others/thumb/img-0794.webp",
+      "ghana-day/thumb/img-7974.webp",
+      "others/thumb/img-0797.webp",
+    ];
+
+    var rbTrack = document.createElement("div");
+    rbTrack.className = "ribbon__track";
+    for (var copy = 0; copy < 2; copy++) {
+      RIBBON_PHOTOS.forEach(function (rel, i) {
+        var card = document.createElement("div");
+        card.className = "ribbon__card";
+        var im = document.createElement("img");
+        im.src = "assets/gallery-opt/" + rel;
+        im.alt = "A moment at Herons";
+        im.loading = i < 6 && copy === 0 ? "eager" : "lazy";
+        im.decoding = "async";
+        im.draggable = false;
+        card.appendChild(im);
+        rbTrack.appendChild(card);
+      });
+    }
+    ribbon.appendChild(rbTrack);
+
+    var rbHalf = 0;
+    function rbMeasure() { rbHalf = rbTrack.scrollWidth / 2; }
+    rbMeasure();
+    window.addEventListener("load", rbMeasure);
+    window.addEventListener("resize", function () { setTimeout(rbMeasure, 100); });
+
+    var rbOx = 0, rbVx = 0, rbDragging = false, rbHover = false;
+    var rbLastX = 0, rbRaf = 0, rbLast = performance.now(), rbInView = true;
+    var RB_DRIFT = 22;
+
+    function rbMod(v, m) { return ((v % m) + m) % m; }
+
+    function rbTick(now) {
+      rbRaf = 0;
+      var dt = Math.min((now - rbLast) / 1000, 0.05);
+      rbLast = now;
+      if (!rbDragging) {
+        rbVx *= 0.94;
+        if (Math.abs(rbVx) < 0.05) rbVx = 0;
+        rbOx += rbVx;
+        if (rbVx === 0 && !rbHover && !prefersReduce) rbOx += RB_DRIFT * dt;
+      }
+      if (rbHalf > 0) {
+        rbTrack.style.transform = "translate3d(" + -rbMod(rbOx, rbHalf) + "px, 0, 0)";
+      }
+      if (rbInView) rbRaf = requestAnimationFrame(rbTick);
+    }
+
+    if ("IntersectionObserver" in window) {
+      var rbIO = new IntersectionObserver(function (entries) {
+        rbInView = entries[0].isIntersecting;
+        if (rbInView && !rbRaf) {
+          rbLast = performance.now();
+          rbRaf = requestAnimationFrame(rbTick);
+        }
+      });
+      rbIO.observe(ribbon);
+    }
+
+    ribbon.addEventListener("pointerdown", function (e) {
+      rbDragging = true;
+      rbVx = 0;
+      rbLastX = e.clientX;
+      ribbon.classList.add("is-dragging");
+      ribbon.setPointerCapture(e.pointerId);
+    });
+    ribbon.addEventListener("pointermove", function (e) {
+      if (!rbDragging) return;
+      var dx = e.clientX - rbLastX;
+      rbLastX = e.clientX;
+      rbOx -= dx;
+      rbVx = -dx;
+    });
+    function rbEnd() {
+      rbDragging = false;
+      ribbon.classList.remove("is-dragging");
+    }
+    ribbon.addEventListener("pointerup", rbEnd);
+    ribbon.addEventListener("pointercancel", rbEnd);
+    ribbon.addEventListener("mouseenter", function () { rbHover = true; });
+    ribbon.addEventListener("mouseleave", function () { rbHover = false; });
+
+    rbRaf = requestAnimationFrame(rbTick);
+  }
 })();

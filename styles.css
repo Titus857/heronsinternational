@@ -1252,3 +1252,162 @@ body.menu-open{overflow:hidden}
   transform: scale(1.25);
 }
 
+/* ============================================================
+   AWARDS / RECOGNITION STRIP
+   ============================================================ */
+.awards {
+  background: #161616;
+  padding: clamp(1.75rem, 4vw, 2.75rem) 1rem;
+  border-top: 1px solid rgba(255, 255, 255, .06);
+}
+
+.awards__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.awards__eyebrow {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 1.35rem;
+}
+
+.awards__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  flex-wrap: wrap;
+}
+
+.awards__item {
+  display: flex;
+  align-items: center;
+  gap: .95rem;
+  margin: 0;
+}
+
+.awards__item img {
+  width: clamp(54px, 9vw, 72px);
+  height: auto;
+  opacity: .95;
+  filter: brightness(1.18);
+}
+
+.awards__item figcaption {
+  font-family: var(--sans);
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.awards__item figcaption span {
+  display: block;
+  font-weight: 500;
+  font-size: .78rem;
+  color: rgba(255, 255, 255, .55);
+  letter-spacing: .02em;
+}
+
+.awards__div {
+  width: 1px;
+  height: 46px;
+  background: rgba(255, 255, 255, .14);
+}
+
+@media (max-width: 540px) {
+  .awards__div { display: none; }
+  .awards__item {
+    flex-direction: column;
+    text-align: center;
+    gap: .5rem;
+  }
+  .awards__item figcaption { text-align: center; }
+}
+
+/* ============================================================
+   MOMENTS RIBBON — infinite drifting photo band
+   ============================================================ */
+.ribbon {
+  background: var(--light);
+  padding: clamp(2.5rem, 5vw, 4rem) 0 clamp(3rem, 6vw, 4.5rem);
+  overflow: hidden;
+}
+
+.ribbon__head {
+  max-width: var(--maxw);
+  margin: 0 auto clamp(1.5rem, 3vw, 2.25rem);
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.ribbon__eyebrow {
+  font-family: var(--sans);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #b28f00;
+  margin: 0 0 .5rem;
+}
+
+.ribbon__heading {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+  letter-spacing: -.01em;
+}
+
+.ribbon__viewport {
+  position: relative;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.ribbon__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.ribbon__track {
+  display: flex;
+  gap: clamp(.75rem, 1.5vw, 1.15rem);
+  width: max-content;
+  will-change: transform;
+}
+
+.ribbon__card {
+  flex: 0 0 auto;
+  width: clamp(190px, 22vw, 264px);
+  height: clamp(135px, 16vw, 188px);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e9e7e2;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .12);
+  transition: transform .4s var(--ease), box-shadow .4s;
+}
+
+.ribbon__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.ribbon__viewport:not(.is-dragging) .ribbon__card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .2);
+}
+
