@@ -1,0 +1,520 @@
+/* ============================================================
+   CONTACT PAGE — contact.css  (Safari-inspired rebuild)
+   Herons MTN Yellow + Grey + White theme
+   ============================================================ */
+
+/* ============================================================
+   PAGE BACKGROUND
+   ============================================================ */
+body.contact-page {
+  background: #F8F9FB;
+}
+
+/* ============================================================
+   HERO — light airy banner exactly like Safari
+   ============================================================ */
+.contact-hero {
+  padding-top: 120px;
+  padding-bottom: 72px;
+  background: #EEF2F7;
+  text-align: center;
+}
+
+.contact-hero__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.contact-hero__label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-700, #B8860B);
+  margin-bottom: 1.1rem;
+}
+
+.contact-hero__heading {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  color: #111827;
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.contact-hero__sub {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  color: #4B5563;
+  line-height: 1.75;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   MAIN CONTACT SECTION — white body
+   ============================================================ */
+.contact-body {
+  background: #FFFFFF;
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 7rem);
+}
+
+.contact-body__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Two-column grid: form (2/3) + sidebar (1/3) */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+.contact-form-card {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  padding: clamp(2rem, 4vw, 3rem);
+  box-shadow: 0 2px 32px rgba(0,0,0,0.07);
+  border: 1px solid #F0F0F0;
+}
+
+.contact-form-card__heading {
+  font-family: var(--serif);
+  font-size: 1.95rem;
+  font-weight: 400;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.contact-form-card__sub {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  color: #6B7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-form-card__sub a {
+  color: var(--gold-700, #B8860B);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Two-column inner grid for short fields */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-row--full {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6B7280;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #E5E7EB;
+  background: #FAFAFA;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: #111827;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--gold, #FFCC00);
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.18);
+  background: #FFFFFF;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Submit button — MTN Yellow pill, full width */
+.btn-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  background: var(--gold, #FFCC00);
+  color: #111;
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  margin-top: 0.75rem;
+  box-shadow: 0 4px 16px rgba(255,204,0,0.25);
+}
+
+.btn-submit:hover {
+  background: #E6B800;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,204,0,0.35);
+}
+
+/* ============================================================
+   SIDEBAR CARDS
+   ============================================================ */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-card {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  box-shadow: 0 2px 32px rgba(0,0,0,0.07);
+  border: 1px solid #F0F0F0;
+}
+
+.sidebar-card__heading {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-card__text {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: #4B5563;
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Primary pill — MTN Yellow */
+.btn-pill-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.72rem 1.4rem;
+  border-radius: 9999px;
+  background: var(--gold, #FFCC00);
+  color: #111;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 10px rgba(255,204,0,0.28);
+}
+
+.btn-pill-primary:hover {
+  background: #E6B800;
+  transform: translateY(-2px);
+}
+
+/* Secondary pill — outlined */
+.btn-pill-outline {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.72rem 1.4rem;
+  border-radius: 9999px;
+  background: transparent;
+  color: #374151;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid #D1D5DB;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.btn-pill-outline:hover {
+  border-color: #374151;
+  background: #F9FAFB;
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   CAMPUS DIRECTORY SECTION
+   ============================================================ */
+.campus-section {
+  background: #F8F9FB;
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.campus-section__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.campus-section__label {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-700, #B8860B);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.campus-section__heading {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+/* Campus Cards Grid */
+.campus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.campus-card {
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  border: 1px solid #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.campus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.campus-card__stripe {
+  height: 5px;
+  background: var(--gold, #FFCC00);
+}
+
+.campus-card__body {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.campus-card__name {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.campus-card__detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: #4B5563;
+  line-height: 1.5;
+}
+
+.campus-card__detail svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold-700, #B8860B);
+}
+
+.campus-card__detail a {
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.campus-card__detail a:hover {
+  color: var(--gold-700, #B8860B);
+}
+
+/* ============================================================
+   ENQUIRY MODAL (Popup)
+   ============================================================ */
+.enquiry-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.6); /* Dark semi-transparent overlay */
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.enquiry-modal-overlay[aria-hidden="true"] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.enquiry-modal {
+  background: #FFFFFF;
+  border-radius: 1.5rem;
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(0) scale(1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.enquiry-modal-overlay[aria-hidden="true"] .enquiry-modal {
+  transform: translateY(20px) scale(0.98);
+}
+
+.enquiry-modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #4B5563;
+  transition: background 0.2s, color 0.2s;
+  z-index: 10;
+}
+
+.enquiry-modal__close:hover {
+  background: #E5E7EB;
+  color: #111827;
+}
+
+.enquiry-modal__header {
+  margin-bottom: 2.5rem;
+  padding-right: 3rem; /* Leave space for close button */
+}
+
+.enquiry-modal__eyebrow {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3B82F6; /* Matches the Safari blue eyebrow color */
+  margin-bottom: 0.5rem;
+}
+
+.enquiry-modal__title {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.enquiry-modal__desc {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+.enquiry-modal__section-title {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  margin: 2rem 0 1.25rem 0;
+  border-bottom: 1px solid #F3F4F6;
+  padding-bottom: 0.75rem;
+}
+
+.enquiry-modal__form .btn-submit {
+  margin-top: 1.5rem;
+  width: auto;
+  min-width: 200px;
+}

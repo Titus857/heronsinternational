@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Herons International School</title>
+  <meta name="description"
+    content="Contact Herons International School in East Legon, Accra. Reach our admissions team, book a campus tour, or send us a message. We are here to help." />
+  <link rel="icon" type="image/png" href="assets/herons-assets/HIS_Logo-150x150.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mulish:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body class="contact-page">
+
+  <!-- ============ TOP UTILITY BAR ============ -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <ul class="topbar__left">
+        <li><a href="index.html#tour"><span class="ico-dot">✦</span> Schedule a Tour</a></li>
+      </ul>
+      <ul class="topbar__right">
+        <li><a href="tel:+233302509345"><span class="ico-dot">☎</span> +233 30 250 9345</a></li>
+        <li><a href="tel:+233553282325"><span class="ico-dot">☎</span> +233 55 328 2325</a></li>
+        <li><a href="index.html#tour" class="topbar__cta"><span class="ico-dot">♥</span> Book a Visit</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="brand" aria-label="Herons International School home">
+        <img src="assets/herons-assets/HIS_Logo-150x150.png" alt="" class="brand__mark" />
+        <span class="brand__text">
+          <span class="brand__name">Herons</span>
+          <span class="brand__sub">International School</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="index.html#about" class="nav__link">About Us</a>
+        <a href="index.html#ages" class="nav__link">Ages</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Search"><img src="assets/search.svg" alt="" /></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          Menu <img src="assets/menu.svg" alt="" class="menu-btn__icon" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ FULL-SCREEN MENU ============ -->
+  <div class="menu" id="drawer" aria-hidden="true">
+    <div class="menu__top">
+      <a href="index.html" class="brand brand--menu" aria-label="Herons International School home">
+        <img src="assets/herons-assets/HIS_Logo-150x150.png" alt="" class="brand__mark" />
+        <span class="brand__text">
+          <span class="brand__name">Herons</span>
+          <span class="brand__sub">International School</span>
+        </span>
+      </a>
+      <div class="menu__top-actions">
+        <a href="index.html#tour" class="menu__top-link"><span class="menu__top-ico">✦</span> Inquire</a>
+        <a href="index.html#tour" class="menu__top-link"><span class="menu__top-ico">✎</span> Apply</a>
+        <button class="menu__close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+    </div>
+    <div class="menu__body">
+      <nav class="menu__col">
+        <h3>Meet Herons</h3>
+        <ul>
+          <li><a href="index.html#about">About Herons</a></li>
+          <li><a href="index.html#journey">Our Journey</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="index.html#about">Academic Approach</a></li>
+          <li><a href="index.html#ages">Early Years &amp; Primary</a></li>
+          <li><a href="index.html#about">British &amp; Cambridge</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="index.html#about">Life at Herons</a></li>
+          <li><a href="gallery.html">Full Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Admissions</h3>
+        <ul>
+          <li><a href="index.html#tour">Begin Your Journey</a></li>
+          <li><a href="index.html#tour">Book a Visit</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="menu__bottom">
+      <div class="menu__pills">
+        <a href="gallery.html" class="menu__pill">🖼 Gallery</a>
+        <a href="contact.html" class="menu__pill">✉ Contact</a>
+      </div>
+      <div class="menu__pills">
+        <a href="tel:+233302509345" class="menu__pill">☎ +233 30 250 9345</a>
+        <a href="mailto:enquiries@heronsinternational.edu.gh" class="menu__pill">✉ Enquiries</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="contact-hero">
+    <div class="contact-hero__inner">
+      <p class="contact-hero__label">Contact Herons</p>
+      <h1 class="contact-hero__heading">Contact Herons.</h1>
+      <p class="contact-hero__sub">
+        Tell us what you are looking for, ask a question, or book a visit. Our admissions team will help you find the right next step for your family.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ MAIN CONTACT BODY ============ -->
+  <section class="contact-body">
+    <div class="contact-body__inner">
+      <div class="contact-grid">
+
+        <!-- ── LEFT: Contact Form ── -->
+        <div class="contact-form-card">
+          <h2 class="contact-form-card__heading">Send us a message</h2>
+          <p class="contact-form-card__sub">
+            Use this form for admissions questions, school visits, campus information, or anything you would like our team to follow up on.
+          </p>
+
+          <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" id="contactForm">
+            <!-- Row 1: Name + Email -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Name</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required />
+              </div>
+            </div>
+
+            <!-- Row 2: Phone + Preferred Campus -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Phone</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+233 XX XXX XXXX" />
+              </div>
+              <div class="form-group">
+                <label for="contact-campus" class="form-label">Preferred Campus</label>
+                <select id="contact-campus" name="campus" class="form-select">
+                  <option value="" disabled selected>Select campus</option>
+                  <option value="east-legon">East Legon (Main Campus)</option>
+                  <option value="early-years">Early Years Annex</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 3: Age Group -->
+            <div class="form-row form-row--full">
+              <div class="form-group">
+                <label for="contact-age" class="form-label">Child's Age Group</label>
+                <select id="contact-age" name="age_group" class="form-select">
+                  <option value="" disabled selected>Select age group</option>
+                  <option value="infant">Infant (3–12 months)</option>
+                  <option value="toddler">Toddler (1–3 years)</option>
+                  <option value="preschool">Preschool (3–5 years)</option>
+                  <option value="primary">Primary (5–12 years)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 4: Message -->
+            <div class="form-row form-row--full">
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell us how we can help you…" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- ── RIGHT: Sidebar Cards ── -->
+        <div class="contact-sidebar">
+
+          <!-- Admissions Card -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__heading">Admissions</h3>
+            <p class="sidebar-card__text">
+              For tours, enrolment questions, and programme guidance, our admissions team is the best place to start.
+            </p>
+            <div class="sidebar-card__actions">
+              <button type="button" class="btn-pill-primary" id="openEnquiryModalBtn">Start an enquiry</button>
+              <a href="mailto:admissions@heronsinternational.edu.gh" class="btn-pill-outline js-email-fallback" data-email="admissions@heronsinternational.edu.gh">Email admissions</a>
+            </div>
+          </div>
+
+          <!-- Careers Card -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__heading">Careers</h3>
+            <p class="sidebar-card__text">
+              Passionate about education? We are always looking for dedicated educators and staff to join the Herons family.
+            </p>
+            <div class="sidebar-card__actions">
+              <button type="button" class="btn-pill-primary" id="openCareersModalBtn">View openings</button>
+              <a href="mailto:hr@heronsinternational.edu.gh" class="btn-pill-outline js-email-fallback" data-email="hr@heronsinternational.edu.gh">Email HR</a>
+            </div>
+          </div>
+
+          <!-- Quick Contact Card -->
+          <div class="sidebar-card">
+            <h3 class="sidebar-card__heading">Call us</h3>
+            <p class="sidebar-card__text">
+              Prefer to speak directly? Our team is available during school hours.
+            </p>
+            <div class="sidebar-card__actions">
+              <a href="tel:+233302509345" class="btn-pill-primary">+233 30 250 9345</a>
+              <a href="tel:+233553282325" class="btn-pill-outline">+233 55 328 2325</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAMPUS DIRECTORY ============ -->
+  <section class="campus-section">
+    <div class="campus-section__inner">
+      <p class="campus-section__label">Find Us</p>
+      <h2 class="campus-section__heading">Our Campus</h2>
+
+      <div class="campus-grid">
+
+        <!-- Main Campus -->
+        <article class="campus-card">
+          <div class="campus-card__stripe"></div>
+          <div class="campus-card__body">
+            <h3 class="campus-card__name">Main Campus — East Legon</h3>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>GA – 378 – 6099, Close to MDS Lancet Labs,<br>East Legon, Accra, Ghana</span>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 9.8 19.79 19.79 0 0 1 1 1.22 2 2 0 0 1 3 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14h1a2 2 0 0 1 2 2.92z"/></svg>
+              <span>
+                <a href="tel:+233302509345">(+233) 30 250 9345</a><br>
+                <a href="tel:+233553282325">(+233) 55 328 2325</a>
+              </span>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:enquiries@heronsinternational.edu.gh">enquiries@heronsinternational.edu.gh</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Early Years Annex -->
+        <article class="campus-card">
+          <div class="campus-card__stripe"></div>
+          <div class="campus-card__body">
+            <h3 class="campus-card__name">Early Years Annex</h3>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Adjacent to Main Campus,<br>East Legon, Accra, Ghana</span>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 9.8 19.79 19.79 0 0 1 1 1.22 2 2 0 0 1 3 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14h1a2 2 0 0 1 2 2.92z"/></svg>
+              <a href="tel:+233302509345">(+233) 30 250 9345</a>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:earlyyears@heronsinternational.edu.gh">earlyyears@heronsinternational.edu.gh</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Admissions Office -->
+        <article class="campus-card">
+          <div class="campus-card__stripe"></div>
+          <div class="campus-card__body">
+            <h3 class="campus-card__name">Admissions Office</h3>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Monday – Friday: 7:30 am – 4:00 pm<br>Saturday: 9:00 am – 12:00 pm</span>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 9.8 19.79 19.79 0 0 1 1 1.22 2 2 0 0 1 3 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14h1a2 2 0 0 1 2 2.92z"/></svg>
+              <a href="tel:+233553282325">(+233) 55 328 2325</a>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:admissions@heronsinternational.edu.gh">admissions@heronsinternational.edu.gh</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- General Enquiries -->
+        <article class="campus-card">
+          <div class="campus-card__stripe"></div>
+          <div class="campus-card__body">
+            <h3 class="campus-card__name">General Enquiries</h3>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 9.8 19.79 19.79 0 0 1 1 1.22 2 2 0 0 1 3 0h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 14h1a2 2 0 0 1 2 2.92z"/></svg>
+              <span>
+                <a href="tel:+233302509345">(+233) 30 250 9345</a><br>
+                <a href="tel:+233553282325">(+233) 55 328 2325</a>
+              </span>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:enquiries@heronsinternational.edu.gh">enquiries@heronsinternational.edu.gh</a>
+            </div>
+
+            <div class="campus-card__detail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <a href="https://maps.google.com/?q=East+Legon+Accra+Ghana" target="_blank" rel="noopener">View on Google Maps ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <img src="assets/herons-assets/footer-bg.svg" class="footer__bg" alt="" />
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="brand brand--footer">
+          <img src="assets/herons-assets/HIS_Logo-150x150.png?v=2" alt="Herons International School"
+            class="brand__mark brand__mark--footer" width="150" height="150" />
+          <span class="brand__text"><span class="brand__name">Herons</span><span class="brand__sub">International School</span></span>
+        </a>
+        <h4>Who We Are</h4>
+        <p>A community of learners, parents, and staff dedicated to creating an academically rigorous and inclusive learning environment.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/footer-fb.svg" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/footer-ig.svg" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/footer-yt.svg" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#tour">Schedule a Tour</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Location</h4>
+        <p>GA – 378 – 6099<br />Close to MDS Lancet Labs<br />East Legon, Accra, Ghana</p>
+        <a href="https://maps.google.com/?q=East+Legon+Accra+Ghana" target="_blank" rel="noopener" class="footer__map">Google Map ↗</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>Office: <a href="tel:+233302509345">(+233) 30 250 9345</a><br />
+          Mobile: <a href="tel:+233553282325">(+233) 55 328 2325</a><br />
+          <a href="mailto:enquiries@heronsinternational.edu.gh">enquiries@heronsinternational.edu.gh</a>
+        </p>
+        <a href="index.html#tour" class="btn btn--gold footer__cta">Book a Visit</a>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p>© <span id="year"></span> Herons International School. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ============ SCROLL TO TOP ============ -->
+  <button class="to-top" id="toTop" type="button" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <!-- ============ ENQUIRY MODAL ============ -->
+  <div class="enquiry-modal-overlay" id="enquiryModal" aria-hidden="true">
+    <div class="enquiry-modal">
+      <button class="enquiry-modal__close" id="closeEnquiryModalBtn" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      
+      <div class="enquiry-modal__header">
+        <span class="enquiry-modal__eyebrow">Admissions</span>
+        <h2 class="enquiry-modal__title">Start your enquiry</h2>
+        <p class="enquiry-modal__desc">Welcome to Herons International School. Please fill in your details below.</p>
+      </div>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="enquiry-modal__form">
+        <!-- Parent Details -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enq-parent-name" class="form-label">Parent's Name *</label>
+            <input type="text" id="enq-parent-name" name="parent_name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="enq-residence" class="form-label">Area of Residence *</label>
+            <input type="text" id="enq-residence" name="residence" class="form-input" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enq-email" class="form-label">Email Address *</label>
+            <input type="email" id="enq-email" name="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="enq-phone" class="form-label">Phone Number *</label>
+            <input type="tel" id="enq-phone" name="phone" class="form-input" required>
+          </div>
+        </div>
+
+        <!-- Children Details -->
+        <div class="enquiry-modal__section-title">Children's Details</div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enq-child1-name" class="form-label">Child 1 Name *</label>
+            <input type="text" id="enq-child1-name" name="child_1_name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="enq-child1-dob" class="form-label">Date of Birth *</label>
+            <input type="date" id="enq-child1-dob" name="child_1_dob" class="form-input" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enq-child2-name" class="form-label">Child 2 Name (optional)</label>
+            <input type="text" id="enq-child2-name" name="child_2_name" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="enq-child2-dob" class="form-label">Date of Birth</label>
+            <input type="date" id="enq-child2-dob" name="child_2_dob" class="form-input">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enq-child3-name" class="form-label">Child 3 Name (optional)</label>
+            <input type="text" id="enq-child3-name" name="child_3_name" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="enq-child3-dob" class="form-label">Date of Birth</label>
+            <input type="date" id="enq-child3-dob" name="child_3_dob" class="form-input">
+          </div>
+        </div>
+
+        <!-- Enrollment Details -->
+        <div class="enquiry-modal__section-title">Enrollment Details</div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="enq-start-date" class="form-label">Estimated Starting Date *</label>
+            <input type="date" id="enq-start-date" name="start_date" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="enq-campus" class="form-label">Campus Location *</label>
+            <select id="enq-campus" name="campus" class="form-select" required>
+              <option value="" disabled selected>Select campus</option>
+              <option value="east-legon">East Legon (Main Campus)</option>
+              <option value="early-years">Early Years Annex</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Send enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ CAREERS MODAL ============ -->
+  <div class="enquiry-modal-overlay" id="careersModal" aria-hidden="true">
+    <div class="enquiry-modal" style="max-width: 600px;">
+      <button class="enquiry-modal__close" id="closeCareersModalBtn" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      
+      <div class="enquiry-modal__header">
+        <span class="enquiry-modal__eyebrow" style="color: var(--gold-700);">Join Us</span>
+        <h2 class="enquiry-modal__title">Current Openings</h2>
+      </div>
+
+      <div style="text-align: center; padding: 2rem 0;">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: #9CA3AF; margin-bottom: 1rem; display: inline-block;"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+        <h3 style="font-family: var(--serif); font-size: 1.4rem; color: #111827; margin-bottom: 0.5rem;">No Current Vacancies</h3>
+        <p style="font-family: var(--sans); font-size: 0.95rem; color: #6B7280; line-height: 1.6;">
+          We don't have any open positions at the moment, but we are always eager to meet passionate educators. Please email your CV and cover letter to our HR department and we will keep you in mind for future opportunities.
+        </p>
+        <a href="mailto:hr@heronsinternational.edu.gh" class="btn-submit js-email-fallback" data-email="hr@heronsinternational.edu.gh" style="max-width: 200px; margin: 1.5rem auto 0 auto; text-decoration: none;">Email your CV</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Modal & Fallback Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // Function to setup any modal
+      const setupModal = (modalId, openBtnId, closeBtnId) => {
+        const modal = document.getElementById(modalId);
+        const openBtn = document.getElementById(openBtnId);
+        const closeBtn = document.getElementById(closeBtnId);
+
+        if (modal && openBtn && closeBtn) {
+          const openModal = () => {
+            modal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden'; 
+          };
+          const closeModal = () => {
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+          };
+
+          openBtn.addEventListener('click', openModal);
+          closeBtn.addEventListener('click', closeModal);
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+          });
+        }
+      };
+
+      // Setup Admissions Enquiry Modal
+      setupModal('enquiryModal', 'openEnquiryModalBtn', 'closeEnquiryModalBtn');
+
+      // Setup Careers Modal
+      setupModal('careersModal', 'openCareersModalBtn', 'closeCareersModalBtn');
+
+      // Fallback for Mailto Links (in case user has no default email app)
+      const emailLinks = document.querySelectorAll('.js-email-fallback');
+      emailLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          // We let the default mailto: action happen, 
+          // but we also show a small alert just so they see something happens.
+          const email = link.getAttribute('data-email');
+          // Wait a tiny bit, then alert
+          setTimeout(() => {
+             alert("Opening email client for: " + email + "\n\nIf nothing opened, please manually email " + email + " from your webmail.");
+          }, 300);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

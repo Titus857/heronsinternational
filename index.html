@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to Herons International School | A lifetime of confidence starts here</title>
+  <meta name="description"
+    content="Herons International School, East Legon — a community of learners, parents and staff creating an academically rigorous and inclusive learning environment with British & Cambridge curricula." />
+  <link rel="icon" type="image/png" href="assets/herons-assets/HIS_Logo-150x150.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mulish:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ============ TOP UTILITY BAR ============ -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <ul class="topbar__left">
+        <li><a href="#tour"><span class="ico-dot">✦</span> Schedule a Tour</a></li>
+      </ul>
+      <ul class="topbar__right">
+        <li><a href="tel:+233302509345"><span class="ico-dot">☎</span> +233 30 250 9345</a></li>
+        <li><a href="tel:+233553282325"><span class="ico-dot">☎</span> +233 55 328 2325</a></li>
+        <li><a href="#tour" class="topbar__cta"><span class="ico-dot">♥</span> Book a Visit</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="brand" aria-label="Herons International School home">
+        <img src="assets/herons-assets/HIS_Logo-150x150.png" alt="" class="brand__mark" />
+        <span class="brand__text">
+          <span class="brand__name">Herons</span>
+          <span class="brand__sub">International School</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="#about" class="nav__link">About Us</a>
+        <a href="#ages" class="nav__link">Ages</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Search"><img src="assets/search.svg" alt="" /></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          Menu <img src="assets/menu.svg" alt="" class="menu-btn__icon" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ FULL-SCREEN MENU ============ -->
+  <div class="menu" id="drawer" aria-hidden="true">
+    <div class="menu__top">
+      <a href="#" class="brand brand--menu" aria-label="Herons International School home">
+        <img src="assets/herons-assets/HIS_Logo-150x150.png" alt="" class="brand__mark" />
+        <span class="brand__text">
+          <span class="brand__name">Herons</span>
+          <span class="brand__sub">International School</span>
+        </span>
+      </a>
+      <div class="menu__top-actions">
+        <a href="#tour" class="menu__top-link"><span class="menu__top-ico">✦</span> Inquire</a>
+        <a href="#tour" class="menu__top-link"><span class="menu__top-ico">✎</span> Apply</a>
+        <a href="#tour" class="menu__top-link"><span class="menu__top-ico">♥</span> Giving</a>
+        <button class="menu__close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+    </div>
+
+    <div class="menu__body">
+      <nav class="menu__col">
+        <h3>Meet Herons</h3>
+        <ul>
+          <li><a href="#about">About Herons</a></li>
+          <li><a href="#about">Our Purpose</a></li>
+          <li><a href="#about">Our Promise</a></li>
+          <li><a href="#about">Meet Our Team</a></li>
+          <li><a href="#journey">Mission, Vision, Values</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="#about">Academic Approach</a></li>
+          <li><a href="#ages">Early Years</a></li>
+          <li><a href="#ages">Primary School</a></li>
+          <li><a href="#only">Signature Programs</a></li>
+          <li><a href="#only">Library &amp; Play Areas</a></li>
+          <li><a href="#about">British &amp; Cambridge</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#about">Life at Herons</a></li>
+          <li><a href="#only">Arts &amp; Activities</a></li>
+          <li><a href="gallery.html?cat=character">Cultural Events</a></li>
+          <li><a href="gallery.html?cat=ghana">Ghana Day</a></li>
+          <li><a href="gallery.html?cat=sports">Sports Day</a></li>
+          <li><a href="gallery.html">Full Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Admissions</h3>
+        <ul>
+          <li><a href="#tour">Begin Your Journey</a></li>
+          <li><a href="#tour">Fees &amp; Affording</a></li>
+          <li><a href="#ages">Ages We Welcome</a></li>
+          <li><a href="#tour">Schedule a Tour</a></li>
+          <li><a href="#tour">Book a Visit</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="menu__bottom">
+      <div class="menu__pills">
+        <a href="#tour" class="menu__pill">📅 Calendar</a>
+        <a href="#about" class="menu__pill">📰 News</a>
+        <a href="gallery.html" class="menu__pill">🖼 Gallery</a>
+        <a href="contact.html" class="menu__pill">✉ Contact</a>
+      </div>
+      <div class="menu__pills">
+        <a href="tel:+233302509345" class="menu__pill">☎ +233 30 250 9345</a>
+        <a href="mailto:enquiries@heronsinternational.edu.gh" class="menu__pill">✉ Enquiries</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HERO CAROUSEL (Slide-Left + Zoom) ============ -->
+  <section class="hero-carousel" id="heroCarousel">
+    
+    <!-- Background Slides -->
+    <div class="hero-carousel__track" id="heroTrack">
+      <div class="hero-carousel__slide is-active">
+        <img src="assets/herons-assets/image copy 3.png" alt="Herons playground" />
+      </div>
+      <div class="hero-carousel__slide">
+        <img src="assets/herons-assets/primary.jpg" alt="Primary students" />
+      </div>
+      <div class="hero-carousel__slide">
+        <img src="assets/herons-assets/image copy.png" alt="Preschool learner" />
+      </div>
+      <div class="hero-carousel__slide">
+        <img src="assets/herons-assets/environment-1.jpeg" alt="Classroom" />
+      </div>
+      <div class="hero-carousel__slide">
+        <img src="assets/herons-assets/image copy 2.png" alt="Campus life" />
+      </div>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="hero-carousel__overlay"></div>
+
+    <!-- Fixed Content Overlay -->
+    <div class="hero-carousel__content">
+      <div class="hero-carousel__content-inner">
+        <span class="hero-carousel__badge">Admissions Open</span>
+        <h1 class="hero-carousel__heading">
+          Truly international.<br>Built for the future.
+        </h1>
+        <p class="hero-carousel__sub">
+          We are a community composed of learners, parents and staff who are dedicated to creating an academically rigorous and inclusive learning environment, empowering children to explore and soar.
+        </p>
+        <div class="hero-carousel__ctas">
+          <a href="#tour" class="hero-carousel__btn hero-carousel__btn--primary">Book a Visit</a>
+          <a href="#about" class="hero-carousel__btn hero-carousel__btn--outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="hero-carousel__dots" id="heroSliderDots">
+      <button class="hero-carousel__dot is-active" aria-label="Go to slide 1"></button>
+      <button class="hero-carousel__dot" aria-label="Go to slide 2"></button>
+      <button class="hero-carousel__dot" aria-label="Go to slide 3"></button>
+      <button class="hero-carousel__dot" aria-label="Go to slide 4"></button>
+      <button class="hero-carousel__dot" aria-label="Go to slide 5"></button>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <p class="eyebrow eyebrow--gold">About Herons</p>
+      <h2 class="about__heading">We're a school where curiosity thrives, connections deepen, and character flourishes.
+      </h2>
+
+      <div class="about__collage">
+        <img src="assets/herons-assets/illustration-tree-2.svg" class="about__bg-trees" alt="" />
+
+        <figure class="about__slide">
+          <div class="about__carousel">
+            <div class="about__track" id="aboutTrack">
+              <img class="about__slide-img" src="assets/herons-assets/preschool.jpg"
+                alt="Preschool learning at Herons" />
+              <img class="about__slide-img" src="assets/herons-assets/environment-15.jpeg"
+                alt="Outdoor play at Herons campus" />
+              <img class="about__slide-img" src="assets/herons-assets/environment-11.jpeg"
+                alt="Herons library and learning spaces" />
+            </div>
+          </div>
+          <img src="assets/herons-assets/bird.svg" class="about__float about__float--bird" alt="" />
+        </figure>
+
+        <figure class="about__map">
+          <img src="assets/herons-assets/image-map.png" alt="Map of East Legon and Accra" />
+        </figure>
+
+        <figure class="about__campus">
+          <img src="assets/herons-assets/Trip-to-Cape-Coast-2-1024x670.jpeg" alt="Herons students on campus steps" />
+        </figure>
+      </div>
+
+      <div class="about__lede">
+        <div class="purpose">
+          <h6 class="purpose__label">Who We Are</h6>
+          <p>A community composed of learners, parents and staff who are dedicated to creating an academically rigorous
+            and inclusive learning environment. We are igniting the minds of our children to become lifelong learners
+            with skills that match the current changes of our global world.</p>
+        </div>
+
+        <div class="features">
+          <ol class="features__list" id="featuresList">
+            <li class="is-active"><span class="features__num">1.</span> British &amp; Cambridge Curricula</li>
+            <li><span class="features__num">2.</span> Library &amp; large play areas</li>
+            <li><span class="features__num">3.</span> Quality Educators</li>
+            <li><span class="features__num">4.</span> Early Independence</li>
+            <li><span class="features__num">5.</span> Culturally relevant activities</li>
+            <li><span class="features__num">6.</span> Family oriented events</li>
+          </ol>
+          <div class="features__nav">
+            <button class="features__btn" id="featPrev" aria-label="Previous">&larr; Previous</button>
+            <button class="features__btn" id="featNext" aria-label="Next">Next &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY (signature) ============ -->
+  <section class="journey" id="journey">
+    <img src="assets/herons-assets/leaf-1.svg" class="journey__leaf journey__leaf--1" alt="" />
+    <img src="assets/herons-assets/leaf-2.svg" class="journey__leaf journey__leaf--2" alt="" />
+    <div class="journey__inner">
+      <p class="eyebrow eyebrow--light">Our Signature Path</p>
+      <h2 class="journey__heading">The Herons Journey</h2>
+      <p class="journey__sub">Inspired by the bird — from the safety of the nest to the freedom of flight, every child
+        grows through five stages of confidence.</p>
+
+      <figure class="journey__map">
+        <img src="assets/herons-assets/herons-journey.png" alt="The Herons Journey — Nest, Discover, Grow, Lead, and Soar" width="1200" height="400" />
+      </figure>
+
+      <a href="#ages" class="btn btn--outline-light journey__cta">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ============ AGES ============ -->
+  <section class="ages" id="ages">
+    <div class="ages__inner">
+      <p class="eyebrow eyebrow--gold">Ages</p>
+      <h2 class="ages__heading">We meet kids where they are.</h2>
+    </div>
+
+    <div class="ages-carousel" id="agesCarousel" aria-roledescription="carousel">
+      <div class="ages-carousel__viewport" id="agesViewport">
+        <div class="ages-carousel__track" id="agesTrack">
+          <article class="ages-slide" data-shape="0">
+            <button class="ages-slide__hit" type="button" aria-label="Infants">
+              <div class="ages-slide__media" style="background-image:url('assets/herons-assets/infant.jpg')">
+                <div class="ages-slide__body">
+                  <h3>Infants</h3>
+                  <p>Your baby will give you the most important information for the experience.</p>
+                  <span class="ages-slide__range">3–12 months</span>
+                </div>
+              </div>
+            </button>
+          </article>
+          <article class="ages-slide" data-shape="1">
+            <button class="ages-slide__hit" type="button" aria-label="Toddler">
+              <div class="ages-slide__media"
+                style="background-image:url('assets/herons-assets/toddler-2-1024x683.jpg')">
+                <div class="ages-slide__body">
+                  <h3>Toddler</h3>
+                  <p>During this time, his physical growth and motor development will slow.</p>
+                  <span class="ages-slide__range">1–3 years</span>
+                </div>
+              </div>
+            </button>
+          </article>
+          <article class="ages-slide" data-shape="2">
+            <button class="ages-slide__hit" type="button" aria-label="Preschool">
+              <div class="ages-slide__media" style="background-image:url('assets/herons-assets/preschool.jpg')">
+                <div class="ages-slide__body">
+                  <h3>Preschool</h3>
+                  <p>Your child is advancing from infancy toward and into the preschool years.</p>
+                  <span class="ages-slide__range">3–5 years</span>
+                </div>
+              </div>
+            </button>
+          </article>
+          <article class="ages-slide" data-shape="3">
+            <button class="ages-slide__hit" type="button" aria-label="Primary">
+              <div class="ages-slide__media" style="background-image:url('assets/herons-assets/primary.jpg')">
+                <div class="ages-slide__body">
+                  <h3>Primary</h3>
+                  <p>Your child should feel confident in her ability to meet the complex challenges.</p>
+                  <span class="ages-slide__range">5–12 years</span>
+                </div>
+              </div>
+            </button>
+          </article>
+        </div>
+      </div>
+      <div class="ages-carousel__dots" id="agesDots" role="tablist" aria-label="Age groups"></div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="stats">
+    <div class="stats__inner">
+      <h2 class="stats__heading">A Heron's Eye View of Herons</h2>
+      <img src="assets/herons-assets/bird.svg" class="stats__bird" alt="" />
+      <ul class="stats__grid">
+        <li><img src="assets/stats-icn-1.svg" alt="" /><strong>5</strong><span>Stages of growth from Nest to Soar,
+            guiding every learner</span></li>
+        <li><img src="assets/stats-icn-2.svg" alt="" /><strong>2</strong><span>World-class curricula — British &amp;
+            Cambridge — under one roof</span></li>
+        <li><img src="assets/stats-icn-3.svg" alt="" /><strong>3mo–12yrs</strong><span>Ages welcomed, from infants to
+            confident primary learners</span></li>
+        <li><img src="assets/stats-icn-4.svg" alt="" /><strong>100%</strong><span>Family-oriented community where every
+            child is known</span></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- ============ CAMPUS / LOCATION ============ -->
+  <section class="campus" id="gallery">
+    <div class="campus__inner">
+      <div class="campus__top">
+        <figure class="campus__hero">
+          <img src="assets/herons-assets/environment-15.jpeg" alt="Herons campus play areas" />
+          <button class="campus__listen"><img src="assets/listen-now.svg" alt="" /> Hear What We Hear</button>
+        </figure>
+        <div class="campus__copy">
+          <h2>A place where curiosity grows and the outdoors becomes the classroom.</h2>
+          <p>Step onto our East Legon campus and feel it immediately — this place <em>sings</em>. With a library, large
+            play areas and room to roam, learning isn't contained to the classroom. Here, children sketch under trees,
+            build friendships in the open air, and discover who they're becoming.</p>
+        </div>
+      </div>
+
+      <div class="campus__bottom">
+        <figure class="campus__photo"><img src="assets/herons-assets/environment-11.jpeg" alt="Herons library" />
+        </figure>
+        <figure class="campus__photo"><img src="assets/herons-assets/environment-4.jpeg"
+            alt="Preschool classroom at Herons" /></figure>
+      </div>
+
+      <div class="locator">
+        <div class="locator__illustration" aria-hidden="true"></div>
+
+        <div class="locator__tabs" role="tablist">
+          <button class="locator__tab is-active" data-loc="local">Local</button>
+          <button class="locator__tab" data-loc="regional">Regional</button>
+          <button class="locator__tab" data-loc="global">Global</button>
+        </div>
+
+        <div class="locator__stage">
+          <div class="locator__map-wrap">
+            <img class="locator__map-img is-active" data-map="local" src="assets/herons-assets/local-map.jpeg"
+              alt="Local map — East Legon campus and surroundings" />
+            <img class="locator__map-img" data-map="regional" src="assets/herons-assets/regional-map.jpeg"
+              alt="Regional map — Greater Accra connections" />
+            <img class="locator__map-img" data-map="global" src="assets/herons-assets/global-map.jpeg"
+              alt="Global map — Herons international reach" />
+          </div>
+
+          <div class="locator__cards">
+            <article class="locator__card is-active" data-panel="local">
+              <h4>Rooted in East Legon</h4>
+              <p>Just minutes from the heart of East Legon and close to MDS Lancet Labs, our campus is an easy, calm and
+                secure place for families — giving children room to breathe while keeping them anchored to the energy of
+                Accra.</p>
+            </article>
+            <article class="locator__card" data-panel="regional">
+              <h4>Class extends beyond Herons</h4>
+              <p>The whole city becomes a learning playground. From cultural visits to community service in Accra,
+                children build a special relationship with their home — and find their place within it.</p>
+            </article>
+            <article class="locator__card" data-panel="global">
+              <h4>World citizens in the making</h4>
+              <p>With British &amp; Cambridge curricula, our learners are equipped with skills that match the changes of
+                our global world — ready to connect, contribute and lead anywhere.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES / ONLY AT HERONS ============ -->
+  <section class="only" id="only">
+    <div class="only__inner">
+      <aside class="only__aside">
+        <div class="only__sticky">
+          <p class="eyebrow eyebrow--gold">Only at Herons</p>
+          <h2 class="only__heading">Where authentic, joyful experiences shape confident learners.</h2>
+          <ol class="only__list" id="onlyList">
+            <li class="is-active" data-step="0"><span class="only__dot"></span>British &amp; Cambridge Curricula</li>
+            <li data-step="1"><span class="only__dot"></span>Library &amp; large play areas</li>
+            <li data-step="2"><span class="only__dot"></span>Quality educators who know each child</li>
+            <li data-step="3"><span class="only__dot"></span>Early independence that builds confidence</li>
+            <li data-step="4"><span class="only__dot"></span>Culturally relevant activities</li>
+            <li data-step="5"><span class="only__dot"></span>Family oriented events</li>
+          </ol>
+        </div>
+      </aside>
+
+      <div class="only__cards" id="onlyCards">
+        <article class="only__card" data-step="0">
+          <div class="only__media" style="background-image:url('assets/herons-assets/primary.jpg')"></div>
+          <div class="only__panel">
+            <h3>British &amp; Cambridge Curricula</h3>
+            <p>Two world-class curricula give children a rigorous, globally recognised foundation — preparing them with
+              skills that match the changes of our global world.</p>
+            <a href="#tour" class="only__more">Learn More</a>
+          </div>
+        </article>
+
+        <article class="only__card" data-step="1">
+          <div class="only__media" style="background-image:url('assets/herons-assets/environment-11.jpeg')"></div>
+          <div class="only__panel">
+            <h3>Library &amp; Large Play Areas</h3>
+            <p>Space to read, wonder and play — indoors and out — fuels healthy, happy growth and gives every child room
+              to breathe and explore.</p>
+            <a href="#tour" class="only__more">Learn More</a>
+          </div>
+        </article>
+
+        <article class="only__card" data-step="2">
+          <div class="only__media" style="background-image:url('assets/herons-assets/environment-1.jpeg')"></div>
+          <div class="only__panel">
+            <h3>Quality Educators</h3>
+            <p>Caring, skilled teachers who know each child by name and meet them exactly where they are — turning
+              curiosity into a lifelong passion.</p>
+            <a href="#tour" class="only__more">Learn More</a>
+          </div>
+        </article>
+
+        <article class="only__card" data-step="3">
+          <div class="only__media" style="background-image:url('assets/herons-assets/toddler-2-1024x683.jpg')"></div>
+          <div class="only__panel">
+            <h3>Early Independence</h3>
+            <p>Children learn to take ownership of their learning with quiet, growing confidence — discovering strengths
+              they never knew they had.</p>
+            <a href="#tour" class="only__more">Learn More</a>
+          </div>
+        </article>
+
+        <article class="only__card" data-step="4">
+          <div class="only__media"
+            style="background-image:url('assets/herons-assets/Trip-to-Cape-Coast-2-1024x670.jpeg')"></div>
+          <div class="only__panel">
+            <h3>Culturally Relevant Activities</h3>
+            <p>Learning rooted in our culture helps children value who they are and where they're from — building pride,
+              belonging and identity.</p>
+            <a href="#tour" class="only__more">Learn More</a>
+          </div>
+        </article>
+
+        <article class="only__card" data-step="5">
+          <div class="only__media" style="background-image:url('assets/herons-assets/parents-5.jpg')"></div>
+          <div class="only__panel">
+            <h3>Family Oriented Events</h3>
+            <p>Parents, staff and learners come together often — because school is a family, and the best learning
+              happens in a connected community.</p>
+            <a href="#tour" class="only__more">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL / STORY ============ -->
+  <section class="story">
+    <div class="story__inner">
+      <div class="story__text">
+        <img src="assets/quote-icon-blue.svg" class="story__quote-icon" alt="" />
+        <blockquote>Anyone who steps onto campus can feel like they belong, because there are so many people who do so
+          many cool, different things that everybody has a place here.</blockquote>
+        <div class="story__author">
+          <img class="story__avatar" src="assets/herons-assets/parents-2.jpg" alt="A Herons parent" />
+          <div class="story__meta">
+            <strong>Ama, Herons Parent</strong>
+            <span>Class Family, 2024</span>
+          </div>
+        </div>
+        <a href="#" class="story__link">View Story</a>
+      </div>
+
+      <div class="story__media">
+        <img class="story__media-img" src="assets/herons-assets/Trip-to-Cape-Coast-2-1024x670.jpeg"
+          alt="Herons students and staff together" />
+        <button class="story__play" type="button" aria-label="Listen now">
+          <svg class="story__play-ring" viewBox="0 0 120 120" aria-hidden="true">
+            <defs>
+              <path id="storyRingPath" d="M60,60 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+            </defs>
+            <text>
+              <textPath href="#storyRingPath" startOffset="0">LISTEN NOW&#160;&#160;&#8226;&#160;&#160;LISTEN
+                NOW&#160;&#160;&#8226;&#160;&#160;</textPath>
+            </text>
+          </svg>
+          <span class="story__play-core" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PATHS ============ -->
+  <section class="paths" id="tour">
+    <div class="paths__inner">
+      <h2 class="paths__heading">Chart a path through our wetland of possibilities.</h2>
+      <div class="paths__grid">
+        <article class="path-card path-card--learn">
+          <div class="path-card__media" style="background-image:url('assets/herons-assets/primary.jpg')"></div>
+          <div class="path-card__panel">
+            <h3>Learn</h3>
+            <div class="path-card__reveal">
+              <p>Children dive into a world that sparks wonder — where questions lead to discoveries and classroom walls
+                extend outdoors.</p>
+              <a href="#" class="path-card__btn">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="path-card path-card--experience">
+          <div class="path-card__media" style="background-image:url('assets/herons-assets/environment-15.jpeg')"></div>
+          <div class="path-card__panel">
+            <h3>Experience</h3>
+            <div class="path-card__reveal">
+              <p>Classmates step into a vibrant community — where the connections are genuine and seasons of wonder
+                become lifelong passions.</p>
+              <a href="#" class="path-card__btn">Learn More</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="path-card path-card--apply">
+          <div class="path-card__media" style="background-image:url('assets/herons-assets/parents-2.jpg')"></div>
+          <div class="path-card__panel">
+            <h3>Apply</h3>
+            <div class="path-card__reveal">
+              <p>Step into a new adventure that feels less like applying to a school and more like finding your child's
+                second home.</p>
+              <a href="#" class="path-card__btn">Learn More</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EVENTS PHOTO STRIP ============ -->
+  <section class="events-strip" id="events">
+    <div class="events-strip__inner">
+      <p class="events-strip__label">Our School in Pictures</p>
+      <h2 class="events-strip__heading">Moments that matter.<br />Memories that last.</h2>
+      <p class="events-strip__sub">From the track to the classroom, every event at Herons is a chance for our children to shine.</p>
+      <a href="gallery.html" class="events-strip__cta">Browse full gallery ↗</a>
+
+      <div class="events-cats">
+        <a href="gallery.html?cat=sports" class="events-cat" aria-label="Sports Day gallery">
+          <img src="assets/gallery/sports-day/IMG_8667.jpg" alt="Sports Day at Herons" loading="lazy" />
+          <div class="events-cat__overlay">
+            <span class="events-cat__name">Sports Day</span>
+            <span class="events-cat__count">38 photos</span>
+          </div>
+          <span class="events-cat__arrow">↗</span>
+        </a>
+        <a href="gallery.html?cat=ghana" class="events-cat" aria-label="Ghana Day gallery">
+          <img src="assets/gallery/ghana-day/IMG_7718.jpg" alt="Ghana Day at Herons" loading="lazy" />
+          <div class="events-cat__overlay">
+            <span class="events-cat__name">Ghana Day</span>
+            <span class="events-cat__count">57 photos</span>
+          </div>
+          <span class="events-cat__arrow">↗</span>
+        </a>
+        <a href="gallery.html?cat=character" class="events-cat" aria-label="Character Day gallery">
+          <img src="assets/gallery/character-day/IMG_0116.JPG" alt="Character Day at Herons" loading="lazy" />
+          <div class="events-cat__overlay">
+            <span class="events-cat__name">Character Day</span>
+            <span class="events-cat__count">52 photos</span>
+          </div>
+          <span class="events-cat__arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <img src="assets/herons-assets/footer-bg.svg" class="footer__bg" alt="" />
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="brand brand--footer">
+          <img src="assets/herons-assets/HIS_Logo-150x150.png?v=2" alt="Herons International School"
+            class="brand__mark brand__mark--footer" width="150" height="150" />
+          <span class="brand__text"><span class="brand__name">Herons</span><span class="brand__sub">International
+              School</span></span>
+        </a>
+        <h4>Who We Are</h4>
+        <p>We are a community composed of learners, parents, and staff who are dedicated to creating an academically
+          rigorous and inclusive learning environment.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/footer-fb.svg" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/footer-ig.svg" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/footer-yt.svg" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#tour">Schedule a Tour</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Location</h4>
+        <p>GA – 378 – 6099<br />Close to MDS Lancet Labs<br />East Legon, Ghana</p>
+        <a href="#" class="footer__map">Google Map ↗</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>Office: <a href="tel:+233302509345">(+233) 30 250 9345</a><br />
+          Mobile: <a href="tel:+233553282325">(+233) 55 328 2325</a><br />
+          <a href="mailto:enquiries@heronsinternational.edu.gh">enquiries@heronsinternational.edu.gh</a>
+        </p>
+        <a href="#tour" class="btn btn--gold footer__cta">Book a Visit</a>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p>© <span id="year"></span> Herons International School. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ============ SCROLL TO TOP ============ -->
+  <button class="to-top" id="toTop" type="button" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

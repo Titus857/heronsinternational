@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Herons International School</title>
+  <meta name="description"
+    content="Browse photos from Sports Day, Ghana Day, Character Day and everyday life at Herons International School, East Legon." />
+  <link rel="icon" type="image/png" href="assets/herons-assets/HIS_Logo-150x150.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Mulish:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+
+<body>
+
+  <!-- ============ TOP UTILITY BAR ============ -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <ul class="topbar__left">
+        <li><a href="index.html#tour"><span class="ico-dot">✦</span> Schedule a Tour</a></li>
+      </ul>
+      <ul class="topbar__right">
+        <li><a href="tel:+233302509345"><span class="ico-dot">☎</span> +233 30 250 9345</a></li>
+        <li><a href="tel:+233553282325"><span class="ico-dot">☎</span> +233 55 328 2325</a></li>
+        <li><a href="index.html#tour" class="topbar__cta"><span class="ico-dot">♥</span> Book a Visit</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="brand" aria-label="Herons International School home">
+        <img src="assets/herons-assets/HIS_Logo-150x150.png" alt="" class="brand__mark" />
+        <span class="brand__text">
+          <span class="brand__name">Herons</span>
+          <span class="brand__sub">International School</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="index.html#about" class="nav__link">About Us</a>
+        <a href="index.html#ages" class="nav__link">Ages</a>
+        <a href="gallery.html" class="nav__link nav__link--active">Gallery</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Search"><img src="assets/search.svg" alt="" /></button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          Menu <img src="assets/menu.svg" alt="" class="menu-btn__icon" />
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ FULL-SCREEN MENU ============ -->
+  <div class="menu" id="drawer" aria-hidden="true">
+    <div class="menu__top">
+      <a href="index.html" class="brand brand--menu" aria-label="Herons International School home">
+        <img src="assets/herons-assets/HIS_Logo-150x150.png" alt="" class="brand__mark" />
+        <span class="brand__text">
+          <span class="brand__name">Herons</span>
+          <span class="brand__sub">International School</span>
+        </span>
+      </a>
+      <div class="menu__top-actions">
+        <a href="index.html#tour" class="menu__top-link"><span class="menu__top-ico">✦</span> Inquire</a>
+        <a href="index.html#tour" class="menu__top-link"><span class="menu__top-ico">✎</span> Apply</a>
+        <a href="index.html#tour" class="menu__top-link"><span class="menu__top-ico">♥</span> Giving</a>
+        <button class="menu__close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+    </div>
+
+    <div class="menu__body">
+      <nav class="menu__col">
+        <h3>Meet Herons</h3>
+        <ul>
+          <li><a href="index.html#about">About Herons</a></li>
+          <li><a href="index.html#about">Our Purpose</a></li>
+          <li><a href="index.html#about">Our Promise</a></li>
+          <li><a href="index.html#about">Meet Our Team</a></li>
+          <li><a href="index.html#journey">Mission, Vision, Values</a></li>
+          <li><a href="contact.html">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="index.html#about">Academic Approach</a></li>
+          <li><a href="index.html#ages">Early Years</a></li>
+          <li><a href="index.html#ages">Primary School</a></li>
+          <li><a href="index.html#only">Signature Programs</a></li>
+          <li><a href="index.html#only">Library &amp; Play Areas</a></li>
+          <li><a href="index.html#about">British &amp; Cambridge</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="index.html#about">Life at Herons</a></li>
+          <li><a href="index.html#only">Arts &amp; Activities</a></li>
+          <li><a href="gallery.html?cat=character">Cultural Events</a></li>
+          <li><a href="gallery.html?cat=ghana">Ghana Day</a></li>
+          <li><a href="gallery.html?cat=sports">Sports Day</a></li>
+          <li><a href="gallery.html">Full Gallery</a></li>
+        </ul>
+      </nav>
+      <nav class="menu__col">
+        <h3>Admissions</h3>
+        <ul>
+          <li><a href="index.html#tour">Begin Your Journey</a></li>
+          <li><a href="index.html#tour">Fees &amp; Affording</a></li>
+          <li><a href="index.html#ages">Ages We Welcome</a></li>
+          <li><a href="index.html#tour">Schedule a Tour</a></li>
+          <li><a href="index.html#tour">Book a Visit</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="menu__bottom">
+      <div class="menu__pills">
+        <a href="index.html#tour" class="menu__pill">📅 Calendar</a>
+        <a href="index.html#about" class="menu__pill">📰 News</a>
+        <a href="gallery.html" class="menu__pill">🖼 Gallery</a>
+        <a href="contact.html" class="menu__pill">✉ Contact</a>
+      </div>
+      <p class="menu__copy">© <span class="js-year"></span> Herons International School · East Legon, Accra</p>
+    </div>
+  </div>
+
+  <!-- ============ GALLERY HERO ============ -->
+  <section class="gal-hero">
+    <div class="gal-hero__inner">
+      <p class="gal-hero__eyebrow">Life at Herons</p>
+      <h1 class="gal-hero__heading">Every day is a story<br /><em>worth telling.</em></h1>
+      <p class="gal-hero__sub">Moments from Sports Day, Ghana Day, Character Day and the everyday magic of our classrooms and corridors.</p>
+    </div>
+    <div class="gal-hero__strip" aria-hidden="true" id="heroStrip"></div>
+  </section>
+
+  <!-- ============ GALLERY MAIN ============ -->
+  <section class="gal-main" id="gallery">
+    <div class="gal-main__inner">
+
+      <!-- Filter tabs -->
+      <div class="gal-tabs" role="tablist" aria-label="Filter gallery by event">
+        <button class="gal-tab is-active" data-filter="all" role="tab" aria-selected="true">All Photos</button>
+        <button class="gal-tab" data-filter="sports" role="tab" aria-selected="false">🏅 Sports Day</button>
+        <button class="gal-tab" data-filter="character" role="tab" aria-selected="false">🎭 Character Day</button>
+        <button class="gal-tab" data-filter="ghana" role="tab" aria-selected="false">🇬🇭 Ghana Day</button>
+        <button class="gal-tab" data-filter="others" role="tab" aria-selected="false">🏫 School Life</button>
+      </div>
+
+      <!-- Count badge -->
+      <p class="gal-count"><span id="galCount">202</span> photos</p>
+
+      <!-- Category sections (All view) -->
+      <div class="gal-sections" id="galSections" hidden></div>
+
+      <!-- Uniform grid (filtered view) -->
+      <div class="gal-grid" id="galGrid" hidden></div>
+
+      <!-- Load More -->
+      <div class="gal-load-more" id="galLoadMore" hidden>
+        <button class="gal-load-btn" id="galLoadBtn" type="button">Load more</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+    <button class="lb__close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb__prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+    <button class="lb__next" id="lbNext" aria-label="Next">&#8250;</button>
+    <div class="lb__stage">
+      <img class="lb__img" id="lbImg" src="" alt="" />
+      <p class="lb__caption" id="lbCaption"></p>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <img src="assets/herons-assets/footer-bg.svg" class="footer__bg" alt="" />
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="brand brand--footer">
+          <img src="assets/herons-assets/HIS_Logo-150x150.png?v=2" alt="Herons International School"
+            class="brand__mark brand__mark--footer" width="150" height="150" />
+          <span class="brand__text"><span class="brand__name">Herons</span><span class="brand__sub">International
+              School</span></span>
+        </a>
+        <h4>Who We Are</h4>
+        <p>We are a community composed of learners, parents, and staff who are dedicated to creating an academically
+          rigorous and inclusive learning environment.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><img src="assets/footer-fb.svg" alt="" /></a>
+          <a href="#" aria-label="Instagram"><img src="assets/footer-ig.svg" alt="" /></a>
+          <a href="#" aria-label="YouTube"><img src="assets/footer-yt.svg" alt="" /></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Important Links</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="index.html#tour">Schedule a Tour</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Location</h4>
+        <p>GA – 378 – 6099<br />Close to MDS Lancet Labs<br />East Legon, Ghana</p>
+        <a href="#" class="footer__map">Google Map ↗</a>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <p>Office: <a href="tel:+233302509345">(+233) 30 250 9345</a><br />
+          Mobile: <a href="tel:+233553282325">(+233) 55 328 2325</a><br />
+          <a href="mailto:enquiries@heronsinternational.edu.gh">enquiries@heronsinternational.edu.gh</a>
+        </p>
+        <a href="index.html#tour" class="btn btn--gold footer__cta">Book a Visit</a>
+      </div>
+    </div>
+
+    <div class="footer__bar">
+      <p>© <span id="year"></span> Herons International School. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ============ SCROLL TO TOP ============ -->
+  <button class="to-top" id="toTop" type="button" aria-label="Scroll back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+
+</html>
